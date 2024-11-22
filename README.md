@@ -6,7 +6,7 @@ Coded by Galymzhan Moldagulov (Grad student @ IBS-CARS & UNIST, KR)
 
 [Organometallic Space (Click to Open)](https://moldagulovg.github.io/organometallic-space/umap_plot.html)
 
-![](https://github.com/moldagulovg/organometallic-space/demonstration.gif)
+![](https://github.com/moldagulovg/organometallic-space/blob/main/demonstration.gif)
 
 ## Methods:
 - Sampled 1k mononuclear organometallic complexes from tmQM dataset and CSD <sup>[1, 2]</sup>;
