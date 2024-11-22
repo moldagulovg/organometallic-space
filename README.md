@@ -4,9 +4,18 @@
 
 Coded by Galymzhan Moldagulov (Grad student @ IBS-CARS & UNIST, KR)
 
-[Organometallic Space (Click to Open)](https://moldagulovg.github.io/organometallic-space/umap_plot.html)
+## [Organometallic Space (Click to Open)](https://moldagulovg.github.io/organometallic-space/umap_plot.html)
 
-![](https://github.com/moldagulovg/organometallic-space/blob/main/demonstration.gif)
+You can easily:
+- explore chemical space in the interactive Faerun map;
+- search complexes by their CSD code;
+- switch between color schemes in the plot legend;
+- look at 3D structures of individual complexes (e.g. [WAXGAG](https://moldagulovg.github.io/organometallic-space/saved_htmls/WAXGAG.html), [KIPBAP](https://moldagulovg.github.io/organometallic-space/saved_htmls/KIPBAP.html) and [AGUZAD](https://moldagulovg.github.io/organometallic-space/saved_htmls/AGUZAD.html)).
+
+
+![](https://github.com/moldagulovg/organometallic-space/blob/main/3d-example.png)
+
+![](https://github.com/moldagulovg/organometallic-space/blob/main/om-space.png)
 
 ## Methods:
 - Sampled 1k mononuclear organometallic complexes from tmQM dataset and CSD <sup>[1, 2]</sup>;
