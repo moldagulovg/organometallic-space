@@ -13,11 +13,11 @@ You can easily:
 - look at 3D structures of individual complexes (e.g. [WAXGAG](https://moldagulovg.github.io/organometallic-space/saved_htmls/WAXGAG.html), [KIPBAP](https://moldagulovg.github.io/organometallic-space/saved_htmls/KIPBAP.html) and [AGUZAD](https://moldagulovg.github.io/organometallic-space/saved_htmls/AGUZAD.html)).
 
 
-![](/organometallic-space/docs/assets/om-space.png)
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/om-space.png)
 
-![](/organometallic-space/docs/assets/3d-example.png)
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/3d-example.png)
 
-![](/organometallic-space/docs/assets/demonstration.gif)
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/demonstration.gif)
 
 
 ## Methods:
@@ -38,3 +38,6 @@ You can easily:
 
 ## Acknowledgements:
 Big shoutout to Ph.D. Yaroslav Sobolev (IBS-CARS, KR) for teaching me how embeddings of multi-dimensional space work, Junren Li (PKU, CN) for his guidance on UMAP and Faerun, as well as Sanzhar Nurgaliyev (NU, KZ), and Assanali Salem (UNIST, KR) for their help!
+
+
+
