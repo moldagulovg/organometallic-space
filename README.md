@@ -13,11 +13,11 @@ You can easily:
 - look at 3D structures of individual complexes (e.g. [WAXGAG](https://moldagulovg.github.io/organometallic-space/saved_htmls/WAXGAG.html), [KIPBAP](https://moldagulovg.github.io/organometallic-space/saved_htmls/KIPBAP.html) and [AGUZAD](https://moldagulovg.github.io/organometallic-space/saved_htmls/AGUZAD.html)).
 
 
-![](https://moldagulovg.github.io/organometallic-space/docs/assets/om-space.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/om-space.png)
 
-![](https://moldagulovg.github.io/organometallic-space/docs/assets/3d-example.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/3d-example.png)
 
-![](https://moldagulovg.github.io/organometallic-space/docs/assets/demonstration.gif){ width="800" height="600" style="display: block; margin: 0 auto" }
+![](https://moldagulovg.github.io/organometallic-space/docs/assets/demonstration.gif)
 
 
 
