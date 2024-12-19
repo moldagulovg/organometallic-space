@@ -22,7 +22,7 @@ You can easily:
 
 
 ## Methods:
-- Sampled 1k mononuclear organometallic complexes from tmQM dataset and CSD <sup>[1, 2]</sup>;
+- Sampled 10-108k mononuclear organometallic complexes from tmQM dataset and CSD <sup>[1, 2]</sup>;
 - Vectorized molecules were embedded/projected into 2D TMAP representation <sup>[3]</sup>;
 - Molecules were vectorized by MHFP (MinHash Fingerprint)<sup>[4]</sup>;
 - Chemical space was visualized with interactive Faerun module <sup>[5]</sup>;
