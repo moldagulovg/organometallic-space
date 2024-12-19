@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642423631034"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642423631034" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642423631034 = null;
+var warn = document.getElementById("3dmolwarning_1734642423631034");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642423631034 = null;
+viewergrid_1734642423631034 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642423631034"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642423631034 = viewergrid_1734642423631034[0][0];
+viewergrid_1734642423631034[0][0].zoomTo();viewergrid_1734642423631034[0][1].zoomTo();viewergrid_1734642423631034[1][0].zoomTo();viewergrid_1734642423631034[1][1].zoomTo();	viewergrid_1734642423631034[0][0].addModel("JAGKUX\n     RDKit          3D\n\n 29 30  0  0  0  0  0  0  0  0999 V2000\n    4.7012    7.6860    6.2604 Re  0  0  0  0  0  8  0  0  0  0  0  0\n    3.7528    7.6860    7.6678 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    5.9336    6.7460 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.1348    6.2585    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    5.7993    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563    4.6259    4.8186 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.3981    7.6860    4.5363 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.0331    7.6860    3.1742 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.8119    8.4648    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4038    7.6860    2.4711 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    8.4648    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6650    4.9805    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    6.3333    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    6.2513    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097    3.9250    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469    4.2837    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886    4.8780    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    9.1135    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    9.5727    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8119    6.9072    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    6.9072    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    9.4384    6.7460 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.6563   10.7461    4.8186 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.6650   10.3915    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    9.0387    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    9.1207    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097   11.4470    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469   11.0883    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886   10.4940    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  3  0\n  3  4  1  0\n  4  1  1  0\n  5  1  1  0\n  6  5  1  0\n  7  1  1  0\n  8  7  1  0\n  7  9  1  6\n  8 10  1  1\n 11  8  1  0\n  3 12  1  1\n 13  3  1  0\n 14  3  1  0\n  6 15  1  6\n 16  6  1  0\n 17  6  1  0\n 18  1  1  0\n 19  1  1  0\n 20  7  1  0\n 21  8  1  0\n 22 18  1  0\n 23 19  1  0\n 22 24  1  1\n 25 22  1  0\n 26 22  1  0\n 23 27  1  6\n 28 23  1  0\n 29 23  1  0\n  4  5  3  0\n 18 19  3  0\nM  END\n","sdf");
+	viewergrid_1734642423631034[0][1].addModel("JAGKUX\n     RDKit          3D\n\n 29 30  0  0  0  0  0  0  0  0999 V2000\n    4.7012    7.6860    6.2604 Re  0  0  0  0  0  8  0  0  0  0  0  0\n    3.7528    7.6860    7.6678 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    5.9336    6.7460 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.1348    6.2585    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    5.7993    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563    4.6259    4.8186 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.3981    7.6860    4.5363 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.0331    7.6860    3.1742 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.8119    8.4648    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4038    7.6860    2.4711 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    8.4648    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6650    4.9805    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    6.3333    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    6.2513    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097    3.9250    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469    4.2837    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886    4.8780    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    9.1135    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    9.5727    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8119    6.9072    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    6.9072    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    9.4384    6.7460 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.6563   10.7461    4.8186 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.6650   10.3915    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    9.0387    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    9.1207    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097   11.4470    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469   11.0883    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886   10.4940    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  3  0\n  3  4  1  0\n  4  1  1  0\n  5  1  1  0\n  6  5  1  0\n  7  1  1  0\n  8  7  1  0\n  7  9  1  6\n  8 10  1  1\n 11  8  1  0\n  3 12  1  1\n 13  3  1  0\n 14  3  1  0\n  6 15  1  6\n 16  6  1  0\n 17  6  1  0\n 18  1  1  0\n 19  1  1  0\n 20  7  1  0\n 21  8  1  0\n 22 18  1  0\n 23 19  1  0\n 22 24  1  1\n 25 22  1  0\n 26 22  1  0\n 23 27  1  6\n 28 23  1  0\n 29 23  1  0\n  4  5  3  0\n 18 19  3  0\nM  END\n","sdf");
+	viewergrid_1734642423631034[1][0].addModel("JAGKUX\n     RDKit          3D\n\n 29 30  0  0  0  0  0  0  0  0999 V2000\n    4.7012    7.6860    6.2604 Re  0  0  0  0  0  8  0  0  0  0  0  0\n    3.7528    7.6860    7.6678 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    5.9336    6.7460 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.1348    6.2585    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    5.7993    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563    4.6259    4.8186 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.3981    7.6860    4.5363 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.0331    7.6860    3.1742 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.8119    8.4648    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4038    7.6860    2.4711 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    8.4648    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6650    4.9805    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    6.3333    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    6.2513    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097    3.9250    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469    4.2837    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886    4.8780    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    9.1135    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    9.5727    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8119    6.9072    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    6.9072    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    9.4384    6.7460 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.6563   10.7461    4.8186 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.6650   10.3915    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    9.0387    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    9.1207    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097   11.4470    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469   11.0883    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886   10.4940    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  3  0\n  3  4  1  0\n  4  1  1  0\n  5  1  1  0\n  6  5  1  0\n  7  1  1  0\n  8  7  1  0\n  7  9  1  6\n  8 10  1  1\n 11  8  1  0\n  3 12  1  1\n 13  3  1  0\n 14  3  1  0\n  6 15  1  6\n 16  6  1  0\n 17  6  1  0\n 18  1  1  0\n 19  1  1  0\n 20  7  1  0\n 21  8  1  0\n 22 18  1  0\n 23 19  1  0\n 22 24  1  1\n 25 22  1  0\n 26 22  1  0\n 23 27  1  6\n 28 23  1  0\n 29 23  1  0\n  4  5  3  0\n 18 19  3  0\nM  END\n","sdf");
+	viewergrid_1734642423631034[1][1].addModel("JAGKUX\n     RDKit          3D\n\n 29 30  0  0  0  0  0  0  0  0999 V2000\n    4.7012    7.6860    6.2604 Re  0  0  0  0  0  8  0  0  0  0  0  0\n    3.7528    7.6860    7.6678 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    5.9336    6.7460 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.1348    6.2585    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    5.7993    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563    4.6259    4.8186 C   0  0  1  0  0  0  0  0  0  0  0  0\n    3.3981    7.6860    4.5363 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.0331    7.6860    3.1742 C   0  0  1  0  0  0  0  0  0  0  0  0\n    2.8119    8.4648    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4038    7.6860    2.4711 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    8.4648    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6650    4.9805    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    6.3333    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    6.2513    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097    3.9250    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469    4.2837    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886    4.8780    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    9.1135    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    9.5727    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8119    6.9072    4.6052 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5999    6.9072    3.0701 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    9.4384    6.7460 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.6563   10.7461    4.8186 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.6650   10.3915    6.7243 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1826    9.0387    6.1627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.6516    9.1207    7.6229 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3097   11.4470    4.8074 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8469   11.0883    5.1818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4886   10.4940    3.9013 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  3  0\n  3  4  1  0\n  4  1  1  0\n  5  1  1  0\n  6  5  1  0\n  7  1  1  0\n  8  7  1  0\n  7  9  1  6\n  8 10  1  1\n 11  8  1  0\n  3 12  1  1\n 13  3  1  0\n 14  3  1  0\n  6 15  1  6\n 16  6  1  0\n 17  6  1  0\n 18  1  1  0\n 19  1  1  0\n 20  7  1  0\n 21  8  1  0\n 22 18  1  0\n 23 19  1  0\n 22 24  1  1\n 25 22  1  0\n 26 22  1  0\n 23 27  1  6\n 28 23  1  0\n 29 23  1  0\n  4  5  3  0\n 18 19  3  0\nM  END\n","sdf");
+	viewergrid_1734642423631034[0][1].removeAllModels();
+	viewergrid_1734642423631034[0][1].addModel("JAGKUX\n     RDKit          3D\n\n 12 13  0  0  0  0  0  0  0  0999 V2000\n    4.7012    7.6860    6.2604 Re  0  0  0  0  0  8  0  0  0  0  0  0\n    3.7528    7.6860    7.6678 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    5.9336    6.7460 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    6.2585    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    5.7993    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563    4.6259    4.8186 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3981    7.6860    4.5363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0331    7.6860    3.1742 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1348    9.1135    6.2563 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1384    9.5727    5.5891 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5078    9.4384    6.7460 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.6563   10.7461    4.8186 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  3  0\n  3  4  1  6\n  4  1  1  0\n  5  1  1  0\n  6  5  1  6\n  7  1  1  6\n  8  7  1  6\n  9  1  1  0\n 10  1  1  0\n 11  9  1  1\n 12 10  1  1\n  4  5  3  0\n  9 10  3  0\nM  END\n","sdf_noHs");
+	viewergrid_1734642423631034[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642423631034[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642423631034[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642423631034[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642423631034[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642423631034[0][1].setStyle({"stick": {}});
+	viewergrid_1734642423631034[1][0].setStyle({"stick": {}});
+	viewergrid_1734642423631034[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642423631034[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642423631034[0][0].setBackgroundColor("black");
+	viewergrid_1734642423631034[0][1].setBackgroundColor("black");
+	viewergrid_1734642423631034[1][0].setBackgroundColor("black");
+	viewergrid_1734642423631034[1][1].setBackgroundColor("black");
+	viewergrid_1734642423631034[0][0].addLabel("Re",{"position": {"x": 4.7012, "y": 7.686, "z": 6.2604}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642423631034[1][0].addLabel("Re",{"position": {"x": 4.7012, "y": 7.686, "z": 6.2604}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642423631034[0][1].addLabel("Re",{"position": {"x": 4.7012, "y": 7.686, "z": 6.2604}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642423631034[1][1].addLabel("Re",{"position": {"x": 4.7012, "y": 7.686, "z": 6.2604}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642423631034[0][0].zoomTo();
+	viewergrid_1734642423631034[0][1].zoomTo();
+	viewergrid_1734642423631034[1][0].zoomTo();
+	viewergrid_1734642423631034[1][1].zoomTo();
+viewergrid_1734642423631034[1][1].render();
+viewergrid_1734642423631034[1][0].render();
+viewergrid_1734642423631034[0][1].render();
+viewergrid_1734642423631034[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: JAGKUX</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C10H17ORe</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

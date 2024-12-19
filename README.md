@@ -37,7 +37,7 @@ You can easily:
 6. *Bioinformatics*, **2015**, 31, *8*, 1322–1324.
 
 ## Acknowledgements:
-Big shoutout to Ph.D. Yaroslav Sobolev (IBS-CARS, KR) for teaching me how embeddings of multi-dimensional space work, Junren Li (PKU, CN) for his guidance on UMAP and Faerun, as well as Sanzhar Nurgaliyev (NU, KZ), and Assanali Salem (UNIST, KR) for their help!
+Big shoutout to Ph.D. Yaroslav Sobolev (IBS-CARS, KR) for teaching me how embeddings of multi-dimensional space work, Junren Li (PKU, CN) for his guidance with Faerun, as well as Sanzhar Nurgaliyev (NU, KZ), and Assanali Salem (UNIST, KR) for their help!
 
 
 

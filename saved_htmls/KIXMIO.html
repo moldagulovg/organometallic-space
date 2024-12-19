@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_173464240400189"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_173464240400189" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_173464240400189 = null;
+var warn = document.getElementById("3dmolwarning_173464240400189");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_173464240400189 = null;
+viewergrid_173464240400189 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_173464240400189"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_173464240400189 = viewergrid_173464240400189[0][0];
+viewergrid_173464240400189[0][0].zoomTo();viewergrid_173464240400189[0][1].zoomTo();viewergrid_173464240400189[1][0].zoomTo();viewergrid_173464240400189[1][1].zoomTo();	viewergrid_173464240400189[0][0].addModel("KIXMIO\n     RDKit          3D\n\n 25 28  0  0  0  0  0  0  0  0999 V2000\n    3.2677    2.6307    4.5461 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n    3.3215    3.5152    1.7822 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4297    4.4242    0.7806 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6058    5.3377    0.9770 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2820    4.0100   -0.5184 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3988    4.6257   -1.2325 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9591    2.6756   -0.7865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8334    2.3823   -1.6814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8270    1.7979    0.2540 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6008    0.8933    0.0762 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0215    2.2166    1.5865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5273    4.0033    3.0423 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8760    1.1374    2.9251 S   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5748    3.6697    7.2342 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8618    4.5944    8.1881 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1411    5.4653    7.9304 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7520    4.2876    9.5042 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9339    4.9436   10.1675 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3706    3.0047    9.8709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3021    2.7741   10.7897 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0933    2.0621    8.9059 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8212    1.1867    9.1598 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2116    2.3935    7.5479 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6586    4.0794    5.9360 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9702    1.2476    6.2751 S   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0\n  2  3  4  0\n  3  4  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  1  0\n  9  7  4  0\n 10  9  1  0\n 11  2  4  0\n 12  2  1  0\n 13  1  1  0\n 14 15  4  0\n 15 16  1  0\n 17 15  4  0\n 18 17  1  0\n 19 17  4  0\n 20 19  1  0\n 21 19  4  0\n 22 21  1  0\n 23 14  4  0\n 24  1  1  0\n 25  1  1  0\n  9 11  4  0\n 11 13  1  0\n 14 24  1  0\n 21 23  4  0\n 23 25  1  0\nM  END\n","sdf");
+	viewergrid_173464240400189[0][1].addModel("KIXMIO\n     RDKit          3D\n\n 25 28  0  0  0  0  0  0  0  0999 V2000\n    3.2677    2.6307    4.5461 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n    3.3215    3.5152    1.7822 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4297    4.4242    0.7806 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6058    5.3377    0.9770 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2820    4.0100   -0.5184 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3988    4.6257   -1.2325 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9591    2.6756   -0.7865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8334    2.3823   -1.6814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8270    1.7979    0.2540 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6008    0.8933    0.0762 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0215    2.2166    1.5865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5273    4.0033    3.0423 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8760    1.1374    2.9251 S   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5748    3.6697    7.2342 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8618    4.5944    8.1881 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1411    5.4653    7.9304 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7520    4.2876    9.5042 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9339    4.9436   10.1675 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3706    3.0047    9.8709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3021    2.7741   10.7897 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0933    2.0621    8.9059 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8212    1.1867    9.1598 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2116    2.3935    7.5479 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6586    4.0794    5.9360 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9702    1.2476    6.2751 S   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0\n  2  3  4  0\n  3  4  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  1  0\n  9  7  4  0\n 10  9  1  0\n 11  2  4  0\n 12  2  1  0\n 13  1  1  0\n 14 15  4  0\n 15 16  1  0\n 17 15  4  0\n 18 17  1  0\n 19 17  4  0\n 20 19  1  0\n 21 19  4  0\n 22 21  1  0\n 23 14  4  0\n 24  1  1  0\n 25  1  1  0\n  9 11  4  0\n 11 13  1  0\n 14 24  1  0\n 21 23  4  0\n 23 25  1  0\nM  END\n","sdf");
+	viewergrid_173464240400189[1][0].addModel("KIXMIO\n     RDKit          3D\n\n 25 28  0  0  0  0  0  0  0  0999 V2000\n    3.2677    2.6307    4.5461 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n    3.3215    3.5152    1.7822 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4297    4.4242    0.7806 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6058    5.3377    0.9770 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2820    4.0100   -0.5184 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3988    4.6257   -1.2325 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9591    2.6756   -0.7865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8334    2.3823   -1.6814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8270    1.7979    0.2540 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6008    0.8933    0.0762 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0215    2.2166    1.5865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5273    4.0033    3.0423 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8760    1.1374    2.9251 S   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5748    3.6697    7.2342 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8618    4.5944    8.1881 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1411    5.4653    7.9304 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7520    4.2876    9.5042 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9339    4.9436   10.1675 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3706    3.0047    9.8709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3021    2.7741   10.7897 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0933    2.0621    8.9059 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8212    1.1867    9.1598 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2116    2.3935    7.5479 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6586    4.0794    5.9360 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9702    1.2476    6.2751 S   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0\n  2  3  4  0\n  3  4  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  1  0\n  9  7  4  0\n 10  9  1  0\n 11  2  4  0\n 12  2  1  0\n 13  1  1  0\n 14 15  4  0\n 15 16  1  0\n 17 15  4  0\n 18 17  1  0\n 19 17  4  0\n 20 19  1  0\n 21 19  4  0\n 22 21  1  0\n 23 14  4  0\n 24  1  1  0\n 25  1  1  0\n  9 11  4  0\n 11 13  1  0\n 14 24  1  0\n 21 23  4  0\n 23 25  1  0\nM  END\n","sdf");
+	viewergrid_173464240400189[1][1].addModel("KIXMIO\n     RDKit          3D\n\n 25 28  0  0  0  0  0  0  0  0999 V2000\n    3.2677    2.6307    4.5461 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n    3.3215    3.5152    1.7822 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4297    4.4242    0.7806 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6058    5.3377    0.9770 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2820    4.0100   -0.5184 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3988    4.6257   -1.2325 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9591    2.6756   -0.7865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8334    2.3823   -1.6814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8270    1.7979    0.2540 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6008    0.8933    0.0762 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0215    2.2166    1.5865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5273    4.0033    3.0423 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8760    1.1374    2.9251 S   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5748    3.6697    7.2342 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8618    4.5944    8.1881 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1411    5.4653    7.9304 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7520    4.2876    9.5042 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.9339    4.9436   10.1675 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3706    3.0047    9.8709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3021    2.7741   10.7897 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0933    2.0621    8.9059 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8212    1.1867    9.1598 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2116    2.3935    7.5479 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6586    4.0794    5.9360 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9702    1.2476    6.2751 S   0  0  0  0  0  0  0  0  0  0  0  0\n  1 12  1  0\n  2  3  4  0\n  3  4  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  1  0\n  9  7  4  0\n 10  9  1  0\n 11  2  4  0\n 12  2  1  0\n 13  1  1  0\n 14 15  4  0\n 15 16  1  0\n 17 15  4  0\n 18 17  1  0\n 19 17  4  0\n 20 19  1  0\n 21 19  4  0\n 22 21  1  0\n 23 14  4  0\n 24  1  1  0\n 25  1  1  0\n  9 11  4  0\n 11 13  1  0\n 14 24  1  0\n 21 23  4  0\n 23 25  1  0\nM  END\n","sdf");
+	viewergrid_173464240400189[0][1].removeAllModels();
+	viewergrid_173464240400189[0][1].addModel("KIXMIO\n     RDKit          3D\n\n 17 20  0  0  0  0  0  0  0  0999 V2000\n    3.2677    2.6307    4.5461 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n    3.3215    3.5152    1.7822 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4297    4.4242    0.7806 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2820    4.0100   -0.5184 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9591    2.6756   -0.7865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8270    1.7979    0.2540 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0215    2.2166    1.5865 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5273    4.0033    3.0423 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8760    1.1374    2.9251 S   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5748    3.6697    7.2342 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8618    4.5944    8.1881 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7520    4.2876    9.5042 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3706    3.0047    9.8709 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0933    2.0621    8.9059 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2116    2.3935    7.5479 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.6586    4.0794    5.9360 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9702    1.2476    6.2751 S   0  0  0  0  0  0  0  0  0  0  0  0\n  1  8  1  0\n  2  3  4  0\n  4  3  4  0\n  5  4  4  0\n  6  5  4  0\n  7  2  4  0\n  8  2  1  0\n  9  1  1  0\n 10 11  4  0\n 12 11  4  0\n 13 12  4  0\n 14 13  4  0\n 15 10  4  0\n 16  1  1  0\n 17  1  1  0\n  6  7  4  0\n  7  9  1  0\n 10 16  1  0\n 14 15  4  0\n 15 17  1  0\nM  END\n","sdf_noHs");
+	viewergrid_173464240400189[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_173464240400189[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_173464240400189[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_173464240400189[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_173464240400189[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_173464240400189[0][1].setStyle({"stick": {}});
+	viewergrid_173464240400189[1][0].setStyle({"stick": {}});
+	viewergrid_173464240400189[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_173464240400189[1][1].setStyle({"sphere": {}});
+	viewergrid_173464240400189[0][0].setBackgroundColor("black");
+	viewergrid_173464240400189[0][1].setBackgroundColor("black");
+	viewergrid_173464240400189[1][0].setBackgroundColor("black");
+	viewergrid_173464240400189[1][1].setBackgroundColor("black");
+	viewergrid_173464240400189[0][0].addLabel("Pt",{"position": {"x": 3.2677, "y": 2.6307, "z": 4.5461}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_173464240400189[1][0].addLabel("Pt",{"position": {"x": 3.2677, "y": 2.6307, "z": 4.5461}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_173464240400189[0][1].addLabel("Pt",{"position": {"x": 3.2677, "y": 2.6307, "z": 4.5461}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_173464240400189[1][1].addLabel("Pt",{"position": {"x": 3.2677, "y": 2.6307, "z": 4.5461}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_173464240400189[0][0].zoomTo();
+	viewergrid_173464240400189[0][1].zoomTo();
+	viewergrid_173464240400189[1][0].zoomTo();
+	viewergrid_173464240400189[1][1].zoomTo();
+viewergrid_173464240400189[1][1].render();
+viewergrid_173464240400189[1][0].render();
+viewergrid_173464240400189[0][1].render();
+viewergrid_173464240400189[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: KIXMIO</li>
+<li><strong>Coord Num</strong>: 4</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C10H8N2O2PtS2</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

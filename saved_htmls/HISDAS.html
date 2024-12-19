@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424128153462"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424128153462" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424128153462 = null;
+var warn = document.getElementById("3dmolwarning_17346424128153462");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424128153462 = null;
+viewergrid_17346424128153462 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424128153462"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424128153462 = viewergrid_17346424128153462[0][0];
+viewergrid_17346424128153462[0][0].zoomTo();viewergrid_17346424128153462[0][1].zoomTo();viewergrid_17346424128153462[1][0].zoomTo();viewergrid_17346424128153462[1][1].zoomTo();	viewergrid_17346424128153462[0][0].addModel("HISDAS\n     RDKit          3D\n\n 15 15  0  0  0  0  0  0  0  0999 V2000\n    3.5600    0.8999   11.7187 Au  0  0  0  0  0  2  0  0  0  0  0  0\n    5.5346    3.4346    7.7032 I   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5637    0.2408   12.5491 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   11.1999    3.6751    7.9971 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    6.1878    1.8531   10.4259 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2229    1.4852   10.9248 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3460    2.9632    8.6360 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3756    2.2704    9.8498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5931    1.9992   10.4902 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6080    1.5395   11.2986 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5237    3.3914    8.0470 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5207    3.8547    7.2409 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7137    3.1036    8.7105 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7552    2.4120    9.9115 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5708    2.2352   10.3215 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  7  1  0\n  4 13  1  0\n  5  6  3  0\n  6  1  1  0\n  7  8  4  0\n  8  5  1  0\n  9  8  4  0\n 10  9  1  0\n 11  7  4  0\n 12 11  1  0\n 13 11  4  0\n 14  9  4  0\n 15 14  1  0\n 13 14  4  0\nM  END\n","sdf");
+	viewergrid_17346424128153462[0][1].addModel("HISDAS\n     RDKit          3D\n\n 15 15  0  0  0  0  0  0  0  0999 V2000\n    3.5600    0.8999   11.7187 Au  0  0  0  0  0  2  0  0  0  0  0  0\n    5.5346    3.4346    7.7032 I   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5637    0.2408   12.5491 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   11.1999    3.6751    7.9971 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    6.1878    1.8531   10.4259 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2229    1.4852   10.9248 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3460    2.9632    8.6360 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3756    2.2704    9.8498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5931    1.9992   10.4902 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6080    1.5395   11.2986 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5237    3.3914    8.0470 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5207    3.8547    7.2409 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7137    3.1036    8.7105 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7552    2.4120    9.9115 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5708    2.2352   10.3215 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  7  1  0\n  4 13  1  0\n  5  6  3  0\n  6  1  1  0\n  7  8  4  0\n  8  5  1  0\n  9  8  4  0\n 10  9  1  0\n 11  7  4  0\n 12 11  1  0\n 13 11  4  0\n 14  9  4  0\n 15 14  1  0\n 13 14  4  0\nM  END\n","sdf");
+	viewergrid_17346424128153462[1][0].addModel("HISDAS\n     RDKit          3D\n\n 15 15  0  0  0  0  0  0  0  0999 V2000\n    3.5600    0.8999   11.7187 Au  0  0  0  0  0  2  0  0  0  0  0  0\n    5.5346    3.4346    7.7032 I   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5637    0.2408   12.5491 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   11.1999    3.6751    7.9971 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    6.1878    1.8531   10.4259 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2229    1.4852   10.9248 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3460    2.9632    8.6360 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3756    2.2704    9.8498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5931    1.9992   10.4902 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6080    1.5395   11.2986 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5237    3.3914    8.0470 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5207    3.8547    7.2409 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7137    3.1036    8.7105 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7552    2.4120    9.9115 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5708    2.2352   10.3215 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  7  1  0\n  4 13  1  0\n  5  6  3  0\n  6  1  1  0\n  7  8  4  0\n  8  5  1  0\n  9  8  4  0\n 10  9  1  0\n 11  7  4  0\n 12 11  1  0\n 13 11  4  0\n 14  9  4  0\n 15 14  1  0\n 13 14  4  0\nM  END\n","sdf");
+	viewergrid_17346424128153462[1][1].addModel("HISDAS\n     RDKit          3D\n\n 15 15  0  0  0  0  0  0  0  0999 V2000\n    3.5600    0.8999   11.7187 Au  0  0  0  0  0  2  0  0  0  0  0  0\n    5.5346    3.4346    7.7032 I   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5637    0.2408   12.5491 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   11.1999    3.6751    7.9971 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    6.1878    1.8531   10.4259 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2229    1.4852   10.9248 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3460    2.9632    8.6360 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3756    2.2704    9.8498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5931    1.9992   10.4902 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6080    1.5395   11.2986 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5237    3.3914    8.0470 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5207    3.8547    7.2409 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7137    3.1036    8.7105 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7552    2.4120    9.9115 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5708    2.2352   10.3215 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  7  1  0\n  4 13  1  0\n  5  6  3  0\n  6  1  1  0\n  7  8  4  0\n  8  5  1  0\n  9  8  4  0\n 10  9  1  0\n 11  7  4  0\n 12 11  1  0\n 13 11  4  0\n 14  9  4  0\n 15 14  1  0\n 13 14  4  0\nM  END\n","sdf");
+	viewergrid_17346424128153462[0][1].removeAllModels();
+	viewergrid_17346424128153462[0][1].addModel("HISDAS\n     RDKit          3D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    3.5600    0.8999   11.7187 Au  0  0  0  0  0  2  0  0  0  0  0  0\n    5.5346    3.4346    7.7032 I   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5637    0.2408   12.5491 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   11.1999    3.6751    7.9971 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    6.1878    1.8531   10.4259 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2229    1.4852   10.9248 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3460    2.9632    8.6360 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3756    2.2704    9.8498 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5931    1.9992   10.4902 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5237    3.3914    8.0470 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7137    3.1036    8.7105 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7552    2.4120    9.9115 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  7  1  0\n  4 11  1  0\n  5  6  3  0\n  6  1  1  0\n  7  8  4  0\n  8  5  1  0\n  9  8  4  0\n 10  7  4  0\n 11 10  4  0\n 12  9  4  0\n 11 12  4  0\nM  END\n","sdf_noHs");
+	viewergrid_17346424128153462[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424128153462[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424128153462[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424128153462[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424128153462[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424128153462[0][1].setStyle({"stick": {}});
+	viewergrid_17346424128153462[1][0].setStyle({"stick": {}});
+	viewergrid_17346424128153462[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424128153462[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424128153462[0][0].setBackgroundColor("black");
+	viewergrid_17346424128153462[0][1].setBackgroundColor("black");
+	viewergrid_17346424128153462[1][0].setBackgroundColor("black");
+	viewergrid_17346424128153462[1][1].setBackgroundColor("black");
+	viewergrid_17346424128153462[0][0].addLabel("Au",{"position": {"x": 3.56, "y": 0.8999, "z": 11.7187}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424128153462[1][0].addLabel("Au",{"position": {"x": 3.56, "y": 0.8999, "z": 11.7187}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424128153462[0][1].addLabel("Au",{"position": {"x": 3.56, "y": 0.8999, "z": 11.7187}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424128153462[1][1].addLabel("Au",{"position": {"x": 3.56, "y": 0.8999, "z": 11.7187}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424128153462[0][0].zoomTo();
+	viewergrid_17346424128153462[0][1].zoomTo();
+	viewergrid_17346424128153462[1][0].zoomTo();
+	viewergrid_17346424128153462[1][1].zoomTo();
+viewergrid_17346424128153462[1][1].render();
+viewergrid_17346424128153462[1][0].render();
+viewergrid_17346424128153462[0][1].render();
+viewergrid_17346424128153462[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: HISDAS</li>
+<li><strong>Coord Num</strong>: 2</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C7H3AuCl2IN</li>
+<li><strong>Source</strong>: 2020-2024 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424159165752"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424159165752" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424159165752 = null;
+var warn = document.getElementById("3dmolwarning_17346424159165752");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424159165752 = null;
+viewergrid_17346424159165752 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424159165752"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424159165752 = viewergrid_17346424159165752[0][0];
+viewergrid_17346424159165752[0][0].zoomTo();viewergrid_17346424159165752[0][1].zoomTo();viewergrid_17346424159165752[1][0].zoomTo();viewergrid_17346424159165752[1][1].zoomTo();	viewergrid_17346424159165752[0][0].addModel("KUGNEG\n     RDKit          3D\n\n 24 29  0  0  0  0  0  0  0  0999 V2000\n   10.4310    0.3316    6.5514 Mn  0  0  0  0  0  9  0  0  0  0  0  0\n   12.1871    2.4144    5.3808 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.6871   -1.4598    7.1842 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1928   -1.1524    4.0137 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5481    3.0364    8.4752 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0141    3.2999    6.3908 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4976    3.2946    5.7277 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.5533    1.5892    5.8112 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8240   -0.7554    6.9558 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.2975   -0.5590    4.9636 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2429   -0.4249    8.2000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.2955   -1.2666    8.6377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4257   -0.2748    7.1022 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.9193   -1.0097    6.7758 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.3475    0.9997    6.4552 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.8155    1.0980    5.6736 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0322    2.0858    6.9515 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.8883    1.9318    8.0932 C   0  0  1  0  0  0  0  0  0  0  0  0\n   10.0047    0.6705    8.6831 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.6003    0.5450    9.4121 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.4489    2.9143    9.5906 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.9598    2.5797   10.3708 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8347    3.7912    9.7970 H   0  0  0  0  0  0  0  0  0  0  0  0\n   12.1678    2.2876    9.3637 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  8  1  0\n  2  8  3  0\n  3  9  3  0\n  4 10  3  0\n 18  5  1  1\n  6  7  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 11 12  1  1\n 13  1  1  0\n 13 14  1  6\n 15  1  1  0\n 15 16  1  6\n 17  1  1  0\n 18  1  1  0\n 19  1  1  0\n 19 20  1  1\n 21  5  1  0\n 21 22  1  1\n 23 21  1  0\n 24 21  1  0\n 17  6  1  6\n 11 13  4  0\n 11 19  4  0\n 13 15  4  0\n 15 17  4  0\n 17 18  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424159165752[0][1].addModel("KUGNEG\n     RDKit          3D\n\n 24 29  0  0  0  0  0  0  0  0999 V2000\n   10.4310    0.3316    6.5514 Mn  0  0  0  0  0  9  0  0  0  0  0  0\n   12.1871    2.4144    5.3808 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.6871   -1.4598    7.1842 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1928   -1.1524    4.0137 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5481    3.0364    8.4752 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0141    3.2999    6.3908 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4976    3.2946    5.7277 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.5533    1.5892    5.8112 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8240   -0.7554    6.9558 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.2975   -0.5590    4.9636 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2429   -0.4249    8.2000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.2955   -1.2666    8.6377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4257   -0.2748    7.1022 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.9193   -1.0097    6.7758 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.3475    0.9997    6.4552 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.8155    1.0980    5.6736 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0322    2.0858    6.9515 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.8883    1.9318    8.0932 C   0  0  1  0  0  0  0  0  0  0  0  0\n   10.0047    0.6705    8.6831 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.6003    0.5450    9.4121 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.4489    2.9143    9.5906 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.9598    2.5797   10.3708 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8347    3.7912    9.7970 H   0  0  0  0  0  0  0  0  0  0  0  0\n   12.1678    2.2876    9.3637 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  8  1  0\n  2  8  3  0\n  3  9  3  0\n  4 10  3  0\n 18  5  1  1\n  6  7  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 11 12  1  1\n 13  1  1  0\n 13 14  1  6\n 15  1  1  0\n 15 16  1  6\n 17  1  1  0\n 18  1  1  0\n 19  1  1  0\n 19 20  1  1\n 21  5  1  0\n 21 22  1  1\n 23 21  1  0\n 24 21  1  0\n 17  6  1  6\n 11 13  4  0\n 11 19  4  0\n 13 15  4  0\n 15 17  4  0\n 17 18  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424159165752[1][0].addModel("KUGNEG\n     RDKit          3D\n\n 24 29  0  0  0  0  0  0  0  0999 V2000\n   10.4310    0.3316    6.5514 Mn  0  0  0  0  0  9  0  0  0  0  0  0\n   12.1871    2.4144    5.3808 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.6871   -1.4598    7.1842 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1928   -1.1524    4.0137 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5481    3.0364    8.4752 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0141    3.2999    6.3908 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4976    3.2946    5.7277 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.5533    1.5892    5.8112 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8240   -0.7554    6.9558 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.2975   -0.5590    4.9636 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2429   -0.4249    8.2000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.2955   -1.2666    8.6377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4257   -0.2748    7.1022 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.9193   -1.0097    6.7758 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.3475    0.9997    6.4552 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.8155    1.0980    5.6736 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0322    2.0858    6.9515 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.8883    1.9318    8.0932 C   0  0  1  0  0  0  0  0  0  0  0  0\n   10.0047    0.6705    8.6831 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.6003    0.5450    9.4121 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.4489    2.9143    9.5906 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.9598    2.5797   10.3708 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8347    3.7912    9.7970 H   0  0  0  0  0  0  0  0  0  0  0  0\n   12.1678    2.2876    9.3637 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  8  1  0\n  2  8  3  0\n  3  9  3  0\n  4 10  3  0\n 18  5  1  1\n  6  7  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 11 12  1  1\n 13  1  1  0\n 13 14  1  6\n 15  1  1  0\n 15 16  1  6\n 17  1  1  0\n 18  1  1  0\n 19  1  1  0\n 19 20  1  1\n 21  5  1  0\n 21 22  1  1\n 23 21  1  0\n 24 21  1  0\n 17  6  1  6\n 11 13  4  0\n 11 19  4  0\n 13 15  4  0\n 15 17  4  0\n 17 18  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424159165752[1][1].addModel("KUGNEG\n     RDKit          3D\n\n 24 29  0  0  0  0  0  0  0  0999 V2000\n   10.4310    0.3316    6.5514 Mn  0  0  0  0  0  9  0  0  0  0  0  0\n   12.1871    2.4144    5.3808 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.6871   -1.4598    7.1842 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1928   -1.1524    4.0137 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5481    3.0364    8.4752 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0141    3.2999    6.3908 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4976    3.2946    5.7277 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.5533    1.5892    5.8112 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8240   -0.7554    6.9558 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.2975   -0.5590    4.9636 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2429   -0.4249    8.2000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.2955   -1.2666    8.6377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4257   -0.2748    7.1022 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.9193   -1.0097    6.7758 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.3475    0.9997    6.4552 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.8155    1.0980    5.6736 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0322    2.0858    6.9515 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.8883    1.9318    8.0932 C   0  0  1  0  0  0  0  0  0  0  0  0\n   10.0047    0.6705    8.6831 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.6003    0.5450    9.4121 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.4489    2.9143    9.5906 C   0  0  2  0  0  0  0  0  0  0  0  0\n   10.9598    2.5797   10.3708 H   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8347    3.7912    9.7970 H   0  0  0  0  0  0  0  0  0  0  0  0\n   12.1678    2.2876    9.3637 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  8  1  0\n  2  8  3  0\n  3  9  3  0\n  4 10  3  0\n 18  5  1  1\n  6  7  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 11 12  1  1\n 13  1  1  0\n 13 14  1  6\n 15  1  1  0\n 15 16  1  6\n 17  1  1  0\n 18  1  1  0\n 19  1  1  0\n 19 20  1  1\n 21  5  1  0\n 21 22  1  1\n 23 21  1  0\n 24 21  1  0\n 17  6  1  6\n 11 13  4  0\n 11 19  4  0\n 13 15  4  0\n 15 17  4  0\n 17 18  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424159165752[0][1].removeAllModels();
+	viewergrid_17346424159165752[0][1].addModel("KUGNEG\n     RDKit          3D\n\n 16 21  0  0  0  0  0  0  0  0999 V2000\n   10.4310    0.3316    6.5514 Mn  0  0  0  0  0  9  0  0  0  0  0  0\n   12.1871    2.4144    5.3808 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.6871   -1.4598    7.1842 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1928   -1.1524    4.0137 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5481    3.0364    8.4752 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0141    3.2999    6.3908 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.5533    1.5892    5.8112 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.8240   -0.7554    6.9558 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.2975   -0.5590    4.9636 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2429   -0.4249    8.2000 C   0  0  2  0  0  0  0  0  0  0  0  0\n    8.4257   -0.2748    7.1022 C   0  0  1  0  0  0  0  0  0  0  0  0\n    8.3475    0.9997    6.4552 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.0322    2.0858    6.9515 C   0  0  1  0  0  0  0  0  0  0  0  0\n    9.8883    1.9318    8.0932 C   0  0  1  0  0  0  0  0  0  0  0  0\n   10.0047    0.6705    8.6831 C   0  0  2  0  0  0  0  0  0  0  0  0\n   11.4489    2.9143    9.5906 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  7  1  0\n  2  7  3  0\n  3  8  3  0\n  4  9  3  0\n 14  5  1  1\n  8  1  1  0\n  9  1  1  0\n 10  1  1  6\n 11  1  1  6\n 12  1  1  6\n 13  1  1  0\n 14  1  1  0\n 15  1  1  6\n 16  5  1  1\n 13  6  1  6\n 10 11  4  0\n 10 15  4  0\n 11 12  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  CHG  1   1   1\nM  END\n","sdf_noHs");
+	viewergrid_17346424159165752[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424159165752[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424159165752[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424159165752[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424159165752[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424159165752[0][1].setStyle({"stick": {}});
+	viewergrid_17346424159165752[1][0].setStyle({"stick": {}});
+	viewergrid_17346424159165752[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424159165752[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424159165752[0][0].setBackgroundColor("black");
+	viewergrid_17346424159165752[0][1].setBackgroundColor("black");
+	viewergrid_17346424159165752[1][0].setBackgroundColor("black");
+	viewergrid_17346424159165752[1][1].setBackgroundColor("black");
+	viewergrid_17346424159165752[0][0].addLabel("Mn",{"position": {"x": 10.431, "y": 0.3316, "z": 6.5514}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424159165752[1][0].addLabel("Mn",{"position": {"x": 10.431, "y": 0.3316, "z": 6.5514}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424159165752[0][1].addLabel("Mn",{"position": {"x": 10.431, "y": 0.3316, "z": 6.5514}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424159165752[1][1].addLabel("Mn",{"position": {"x": 10.431, "y": 0.3316, "z": 6.5514}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424159165752[0][0].zoomTo();
+	viewergrid_17346424159165752[0][1].zoomTo();
+	viewergrid_17346424159165752[1][0].zoomTo();
+	viewergrid_17346424159165752[1][1].zoomTo();
+viewergrid_17346424159165752[1][1].render();
+viewergrid_17346424159165752[1][0].render();
+viewergrid_17346424159165752[0][1].render();
+viewergrid_17346424159165752[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: KUGNEG</li>
+<li><strong>Coord Num</strong>: 9</li>
+<li><strong>Charge</strong>: 1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C10H8MnO5(1+)</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

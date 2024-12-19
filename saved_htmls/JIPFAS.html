@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642417823445"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642417823445" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642417823445 = null;
+var warn = document.getElementById("3dmolwarning_1734642417823445");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642417823445 = null;
+viewergrid_1734642417823445 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642417823445"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642417823445 = viewergrid_1734642417823445[0][0];
+viewergrid_1734642417823445[0][0].zoomTo();viewergrid_1734642417823445[0][1].zoomTo();viewergrid_1734642417823445[1][0].zoomTo();viewergrid_1734642417823445[1][1].zoomTo();	viewergrid_1734642417823445[0][0].addModel("JIPFAS\n     RDKit          3D\n\n 25 26  0  0  0  0  0  0  0  0999 V2000\n    4.6687    5.7976    7.2490 Au  0  0  2  0  0  4  0  0  0  0  0  0\n    2.5421    5.8055    8.1687 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    5.6991    6.4380    9.2286 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.9819    5.0954    5.1690 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6177    5.6759    6.0296 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1303    4.8886    3.4966 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6481    5.1701    4.6885 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2391    4.4259    2.4256 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.3187    4.3592    2.7833 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5203    3.5188    2.1468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2285    5.3469    1.1895 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.3558    5.2533    0.7318 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3090    6.2856    1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3277    5.0621    0.1986 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.1691    5.6038   -0.6145 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2794    4.1084   -0.0627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7335    5.3578    0.7179 C   0  0  1  0  0  0  0  0  0  0  0  0\n    8.3816    5.1652   -0.0046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7950    6.3242    0.9235 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1439    4.5747    1.9539 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.1319    4.5754    2.0097 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.8539    3.6352    1.8377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5842    5.0926    3.2817 C   0  0  2  0  0  0  0  0  0  0  0  0\n    8.0731    4.6490    4.0194 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7740    6.0623    3.3421 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  7  1  0\n  7  4  4  0\n  8  6  1  0\n  8  9  1  1\n 10  8  1  0\n 11  8  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 14 15  1  6\n 16 14  1  0\n 17 14  1  0\n 17 18  1  6\n 19 17  1  0\n 20 17  1  0\n 20 21  1  1\n 22 20  1  0\n 23  6  1  0\n 23 24  1  1\n 25 23  1  0\n  5  7  4  0\n 20 23  1  0\nM  END\n","sdf");
+	viewergrid_1734642417823445[0][1].addModel("JIPFAS\n     RDKit          3D\n\n 25 26  0  0  0  0  0  0  0  0999 V2000\n    4.6687    5.7976    7.2490 Au  0  0  2  0  0  4  0  0  0  0  0  0\n    2.5421    5.8055    8.1687 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    5.6991    6.4380    9.2286 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.9819    5.0954    5.1690 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6177    5.6759    6.0296 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1303    4.8886    3.4966 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6481    5.1701    4.6885 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2391    4.4259    2.4256 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.3187    4.3592    2.7833 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5203    3.5188    2.1468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2285    5.3469    1.1895 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.3558    5.2533    0.7318 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3090    6.2856    1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3277    5.0621    0.1986 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.1691    5.6038   -0.6145 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2794    4.1084   -0.0627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7335    5.3578    0.7179 C   0  0  1  0  0  0  0  0  0  0  0  0\n    8.3816    5.1652   -0.0046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7950    6.3242    0.9235 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1439    4.5747    1.9539 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.1319    4.5754    2.0097 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.8539    3.6352    1.8377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5842    5.0926    3.2817 C   0  0  2  0  0  0  0  0  0  0  0  0\n    8.0731    4.6490    4.0194 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7740    6.0623    3.3421 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  7  1  0\n  7  4  4  0\n  8  6  1  0\n  8  9  1  1\n 10  8  1  0\n 11  8  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 14 15  1  6\n 16 14  1  0\n 17 14  1  0\n 17 18  1  6\n 19 17  1  0\n 20 17  1  0\n 20 21  1  1\n 22 20  1  0\n 23  6  1  0\n 23 24  1  1\n 25 23  1  0\n  5  7  4  0\n 20 23  1  0\nM  END\n","sdf");
+	viewergrid_1734642417823445[1][0].addModel("JIPFAS\n     RDKit          3D\n\n 25 26  0  0  0  0  0  0  0  0999 V2000\n    4.6687    5.7976    7.2490 Au  0  0  2  0  0  4  0  0  0  0  0  0\n    2.5421    5.8055    8.1687 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    5.6991    6.4380    9.2286 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.9819    5.0954    5.1690 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6177    5.6759    6.0296 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1303    4.8886    3.4966 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6481    5.1701    4.6885 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2391    4.4259    2.4256 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.3187    4.3592    2.7833 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5203    3.5188    2.1468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2285    5.3469    1.1895 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.3558    5.2533    0.7318 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3090    6.2856    1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3277    5.0621    0.1986 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.1691    5.6038   -0.6145 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2794    4.1084   -0.0627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7335    5.3578    0.7179 C   0  0  1  0  0  0  0  0  0  0  0  0\n    8.3816    5.1652   -0.0046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7950    6.3242    0.9235 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1439    4.5747    1.9539 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.1319    4.5754    2.0097 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.8539    3.6352    1.8377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5842    5.0926    3.2817 C   0  0  2  0  0  0  0  0  0  0  0  0\n    8.0731    4.6490    4.0194 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7740    6.0623    3.3421 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  7  1  0\n  7  4  4  0\n  8  6  1  0\n  8  9  1  1\n 10  8  1  0\n 11  8  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 14 15  1  6\n 16 14  1  0\n 17 14  1  0\n 17 18  1  6\n 19 17  1  0\n 20 17  1  0\n 20 21  1  1\n 22 20  1  0\n 23  6  1  0\n 23 24  1  1\n 25 23  1  0\n  5  7  4  0\n 20 23  1  0\nM  END\n","sdf");
+	viewergrid_1734642417823445[1][1].addModel("JIPFAS\n     RDKit          3D\n\n 25 26  0  0  0  0  0  0  0  0999 V2000\n    4.6687    5.7976    7.2490 Au  0  0  2  0  0  4  0  0  0  0  0  0\n    2.5421    5.8055    8.1687 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    5.6991    6.4380    9.2286 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.9819    5.0954    5.1690 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6177    5.6759    6.0296 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1303    4.8886    3.4966 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6481    5.1701    4.6885 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2391    4.4259    2.4256 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.3187    4.3592    2.7833 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5203    3.5188    2.1468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2285    5.3469    1.1895 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.3558    5.2533    0.7318 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3090    6.2856    1.4927 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3277    5.0621    0.1986 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.1691    5.6038   -0.6145 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2794    4.1084   -0.0627 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7335    5.3578    0.7179 C   0  0  1  0  0  0  0  0  0  0  0  0\n    8.3816    5.1652   -0.0046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7950    6.3242    0.9235 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1439    4.5747    1.9539 C   0  0  2  0  0  0  0  0  0  0  0  0\n    9.1319    4.5754    2.0097 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.8539    3.6352    1.8377 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5842    5.0926    3.2817 C   0  0  2  0  0  0  0  0  0  0  0  0\n    8.0731    4.6490    4.0194 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7740    6.0623    3.3421 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  7  1  0\n  7  4  4  0\n  8  6  1  0\n  8  9  1  1\n 10  8  1  0\n 11  8  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 14 15  1  6\n 16 14  1  0\n 17 14  1  0\n 17 18  1  6\n 19 17  1  0\n 20 17  1  0\n 20 21  1  1\n 22 20  1  0\n 23  6  1  0\n 23 24  1  1\n 25 23  1  0\n  5  7  4  0\n 20 23  1  0\nM  END\n","sdf");
+	viewergrid_1734642417823445[0][1].removeAllModels();
+	viewergrid_1734642417823445[0][1].addModel("JIPFAS\n     RDKit          3D\n\n 13 14  0  0  0  0  0  0  0  0999 V2000\n    4.6687    5.7976    7.2490 Au  0  0  2  0  0  4  0  0  0  0  0  0\n    2.5421    5.8055    8.1687 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    5.6991    6.4380    9.2286 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.9819    5.0954    5.1690 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6177    5.6759    6.0296 S   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1303    4.8886    3.4966 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6481    5.1701    4.6885 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2391    4.4259    2.4256 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2285    5.3469    1.1895 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3277    5.0621    0.1986 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7335    5.3578    0.7179 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1439    4.5747    1.9539 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5842    5.0926    3.2817 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  7  1  0\n  7  4  4  0\n  8  6  1  1\n  9  8  1  6\n 10  9  1  1\n 11 10  1  6\n 12 11  1  0\n 13  6  1  1\n  5  7  4  0\n 12 13  1  6\nM  END\n","sdf_noHs");
+	viewergrid_1734642417823445[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417823445[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417823445[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417823445[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417823445[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642417823445[0][1].setStyle({"stick": {}});
+	viewergrid_1734642417823445[1][0].setStyle({"stick": {}});
+	viewergrid_1734642417823445[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642417823445[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642417823445[0][0].setBackgroundColor("black");
+	viewergrid_1734642417823445[0][1].setBackgroundColor("black");
+	viewergrid_1734642417823445[1][0].setBackgroundColor("black");
+	viewergrid_1734642417823445[1][1].setBackgroundColor("black");
+	viewergrid_1734642417823445[0][0].addLabel("Au",{"position": {"x": 4.6687, "y": 5.7976, "z": 7.249}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417823445[1][0].addLabel("Au",{"position": {"x": 4.6687, "y": 5.7976, "z": 7.249}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417823445[0][1].addLabel("Au",{"position": {"x": 4.6687, "y": 5.7976, "z": 7.249}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417823445[1][1].addLabel("Au",{"position": {"x": 4.6687, "y": 5.7976, "z": 7.249}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417823445[0][0].zoomTo();
+	viewergrid_1734642417823445[0][1].zoomTo();
+	viewergrid_1734642417823445[1][0].zoomTo();
+	viewergrid_1734642417823445[1][1].zoomTo();
+viewergrid_1734642417823445[1][1].render();
+viewergrid_1734642417823445[1][0].render();
+viewergrid_1734642417823445[0][1].render();
+viewergrid_1734642417823445[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: JIPFAS</li>
+<li><strong>Coord Num</strong>: 4</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C7H12AuCl2NS2</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

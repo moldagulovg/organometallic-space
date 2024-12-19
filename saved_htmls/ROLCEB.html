@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642413667652"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642413667652" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642413667652 = null;
+var warn = document.getElementById("3dmolwarning_1734642413667652");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642413667652 = null;
+viewergrid_1734642413667652 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642413667652"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642413667652 = viewergrid_1734642413667652[0][0];
+viewergrid_1734642413667652[0][0].zoomTo();viewergrid_1734642413667652[0][1].zoomTo();viewergrid_1734642413667652[1][0].zoomTo();viewergrid_1734642413667652[1][1].zoomTo();	viewergrid_1734642413667652[0][0].addModel("ROLCEB\n     RDKit          3D\n\n 21 21  0  0  0  0  0  0  0  0999 V2000\n    3.1044    3.2192    2.0992 Ni  0  0  0  0  0  6  0  0  0  0  0  0\n    2.5772    3.2516    4.0585 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3471    2.4877    4.2818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0399    3.7640    4.4673 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5115    3.1723    0.1260 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2684    3.2895   -0.1700 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9953    3.0597   -0.5101 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0779    0.5010    2.1440 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1415    1.1804    2.2660 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0294    1.0457    1.7671 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0730   -0.7049    2.4457 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7489    5.2947    1.8333 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9921    5.3195    2.1199 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2297    4.1457    1.6588 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0894    6.3278    1.7390 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3115    2.9351    3.9433 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.3961    3.7190    4.5261 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0732    2.9014    3.3281 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2978    2.1218    4.4905 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0683    3.0279    3.1781 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0956    3.1130    2.6116 N   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  4  2  1  0\n  5  1  1  0\n  6  5  1  0\n  7  5  1  0\n  8  9  1  0\n  9  1  1  0\n 10  8  2  0\n 11  8  2  0\n 12 13  1  0\n 13  1  1  0\n 14  1  1  0\n 15 12  2  0\n 16 17  1  1\n 18 16  1  0\n 19 16  1  0\n 20 16  1  0\n 21  1  1  0\n 12 14  1  0\n 20 21  3  0\nM  END\n","sdf");
+	viewergrid_1734642413667652[0][1].addModel("ROLCEB\n     RDKit          3D\n\n 21 21  0  0  0  0  0  0  0  0999 V2000\n    3.1044    3.2192    2.0992 Ni  0  0  0  0  0  6  0  0  0  0  0  0\n    2.5772    3.2516    4.0585 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3471    2.4877    4.2818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0399    3.7640    4.4673 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5115    3.1723    0.1260 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2684    3.2895   -0.1700 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9953    3.0597   -0.5101 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0779    0.5010    2.1440 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1415    1.1804    2.2660 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0294    1.0457    1.7671 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0730   -0.7049    2.4457 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7489    5.2947    1.8333 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9921    5.3195    2.1199 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2297    4.1457    1.6588 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0894    6.3278    1.7390 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3115    2.9351    3.9433 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.3961    3.7190    4.5261 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0732    2.9014    3.3281 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2978    2.1218    4.4905 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0683    3.0279    3.1781 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0956    3.1130    2.6116 N   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  4  2  1  0\n  5  1  1  0\n  6  5  1  0\n  7  5  1  0\n  8  9  1  0\n  9  1  1  0\n 10  8  2  0\n 11  8  2  0\n 12 13  1  0\n 13  1  1  0\n 14  1  1  0\n 15 12  2  0\n 16 17  1  1\n 18 16  1  0\n 19 16  1  0\n 20 16  1  0\n 21  1  1  0\n 12 14  1  0\n 20 21  3  0\nM  END\n","sdf");
+	viewergrid_1734642413667652[1][0].addModel("ROLCEB\n     RDKit          3D\n\n 21 21  0  0  0  0  0  0  0  0999 V2000\n    3.1044    3.2192    2.0992 Ni  0  0  0  0  0  6  0  0  0  0  0  0\n    2.5772    3.2516    4.0585 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3471    2.4877    4.2818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0399    3.7640    4.4673 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5115    3.1723    0.1260 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2684    3.2895   -0.1700 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9953    3.0597   -0.5101 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0779    0.5010    2.1440 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1415    1.1804    2.2660 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0294    1.0457    1.7671 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0730   -0.7049    2.4457 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7489    5.2947    1.8333 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9921    5.3195    2.1199 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2297    4.1457    1.6588 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0894    6.3278    1.7390 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3115    2.9351    3.9433 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.3961    3.7190    4.5261 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0732    2.9014    3.3281 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2978    2.1218    4.4905 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0683    3.0279    3.1781 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0956    3.1130    2.6116 N   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  4  2  1  0\n  5  1  1  0\n  6  5  1  0\n  7  5  1  0\n  8  9  1  0\n  9  1  1  0\n 10  8  2  0\n 11  8  2  0\n 12 13  1  0\n 13  1  1  0\n 14  1  1  0\n 15 12  2  0\n 16 17  1  1\n 18 16  1  0\n 19 16  1  0\n 20 16  1  0\n 21  1  1  0\n 12 14  1  0\n 20 21  3  0\nM  END\n","sdf");
+	viewergrid_1734642413667652[1][1].addModel("ROLCEB\n     RDKit          3D\n\n 21 21  0  0  0  0  0  0  0  0999 V2000\n    3.1044    3.2192    2.0992 Ni  0  0  0  0  0  6  0  0  0  0  0  0\n    2.5772    3.2516    4.0585 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3471    2.4877    4.2818 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0399    3.7640    4.4673 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5115    3.1723    0.1260 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2684    3.2895   -0.1700 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9953    3.0597   -0.5101 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0779    0.5010    2.1440 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1415    1.1804    2.2660 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0294    1.0457    1.7671 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0730   -0.7049    2.4457 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7489    5.2947    1.8333 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9921    5.3195    2.1199 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2297    4.1457    1.6588 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0894    6.3278    1.7390 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3115    2.9351    3.9433 C   0  0  2  0  0  0  0  0  0  0  0  0\n    7.3961    3.7190    4.5261 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0732    2.9014    3.3281 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2978    2.1218    4.4905 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0683    3.0279    3.1781 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0956    3.1130    2.6116 N   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  4  2  1  0\n  5  1  1  0\n  6  5  1  0\n  7  5  1  0\n  8  9  1  0\n  9  1  1  0\n 10  8  2  0\n 11  8  2  0\n 12 13  1  0\n 13  1  1  0\n 14  1  1  0\n 15 12  2  0\n 16 17  1  1\n 18 16  1  0\n 19 16  1  0\n 20 16  1  0\n 21  1  1  0\n 12 14  1  0\n 20 21  3  0\nM  END\n","sdf");
+	viewergrid_1734642413667652[0][1].removeAllModels();
+	viewergrid_1734642413667652[0][1].addModel("ROLCEB\n     RDKit          3D\n\n 14 14  0  0  0  0  0  0  0  0999 V2000\n    3.1044    3.2192    2.0992 Ni  0  0  0  0  0  6  0  0  0  0  0  0\n    2.5772    3.2516    4.0585 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5115    3.1723    0.1260 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0779    0.5010    2.1440 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1415    1.1804    2.2660 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0294    1.0457    1.7671 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0730   -0.7049    2.4457 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7489    5.2947    1.8333 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9921    5.3195    2.1199 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2297    4.1457    1.6588 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0894    6.3278    1.7390 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3115    2.9351    3.9433 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0683    3.0279    3.1781 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0956    3.1130    2.6116 N   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  5  1  0\n  5  1  1  0\n  6  4  2  0\n  7  4  2  0\n  8  9  1  0\n  9  1  1  0\n 10  1  1  0\n 11  8  2  0\n 12 13  1  1\n 14  1  1  0\n  8 10  1  0\n 13 14  3  0\nM  END\n","sdf_noHs");
+	viewergrid_1734642413667652[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413667652[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413667652[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413667652[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413667652[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642413667652[0][1].setStyle({"stick": {}});
+	viewergrid_1734642413667652[1][0].setStyle({"stick": {}});
+	viewergrid_1734642413667652[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642413667652[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642413667652[0][0].setBackgroundColor("black");
+	viewergrid_1734642413667652[0][1].setBackgroundColor("black");
+	viewergrid_1734642413667652[1][0].setBackgroundColor("black");
+	viewergrid_1734642413667652[1][1].setBackgroundColor("black");
+	viewergrid_1734642413667652[0][0].addLabel("Ni",{"position": {"x": 3.1044, "y": 3.2192, "z": 2.0992}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413667652[1][0].addLabel("Ni",{"position": {"x": 3.1044, "y": 3.2192, "z": 2.0992}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413667652[0][1].addLabel("Ni",{"position": {"x": 3.1044, "y": 3.2192, "z": 2.0992}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413667652[1][1].addLabel("Ni",{"position": {"x": 3.1044, "y": 3.2192, "z": 2.0992}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413667652[0][0].zoomTo();
+	viewergrid_1734642413667652[0][1].zoomTo();
+	viewergrid_1734642413667652[1][0].zoomTo();
+	viewergrid_1734642413667652[1][1].zoomTo();
+viewergrid_1734642413667652[1][1].render();
+viewergrid_1734642413667652[1][0].render();
+viewergrid_1734642413667652[0][1].render();
+viewergrid_1734642413667652[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: ROLCEB</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C2H7N3NiO8</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

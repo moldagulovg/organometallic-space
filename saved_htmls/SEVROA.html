@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642417521027"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642417521027" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642417521027 = null;
+var warn = document.getElementById("3dmolwarning_1734642417521027");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642417521027 = null;
+viewergrid_1734642417521027 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642417521027"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642417521027 = viewergrid_1734642417521027[0][0];
+viewergrid_1734642417521027[0][0].zoomTo();viewergrid_1734642417521027[0][1].zoomTo();viewergrid_1734642417521027[1][0].zoomTo();viewergrid_1734642417521027[1][1].zoomTo();	viewergrid_1734642417521027[0][0].addModel("SEVROA\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    1.9771    1.2609    5.8559 W   0  0  0  0  0  7  0  0  0  0  0  0\n    3.2467   -0.5425    3.1058 Se  0  0  0  0  0  4  0  0  0  0  0  0\n    3.6997    0.5888    7.2968 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.0574    1.9967    4.7404 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.9362    2.3179    7.8589 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.0415    3.2992    5.5388 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8364   -0.7053    6.4734 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.6644    0.4806    4.4836 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7878   -2.0388    4.1924 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.1498   -2.7294    3.6351 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0344   -2.3762    4.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4655   -1.7516    4.8186 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  8  2  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  1  2  0\n  9  2  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   1  -1\nM  END\n","sdf");
+	viewergrid_1734642417521027[0][1].addModel("SEVROA\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    1.9771    1.2609    5.8559 W   0  0  0  0  0  7  0  0  0  0  0  0\n    3.2467   -0.5425    3.1058 Se  0  0  0  0  0  4  0  0  0  0  0  0\n    3.6997    0.5888    7.2968 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.0574    1.9967    4.7404 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.9362    2.3179    7.8589 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.0415    3.2992    5.5388 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8364   -0.7053    6.4734 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.6644    0.4806    4.4836 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7878   -2.0388    4.1924 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.1498   -2.7294    3.6351 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0344   -2.3762    4.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4655   -1.7516    4.8186 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  8  2  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  1  2  0\n  9  2  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   1  -1\nM  END\n","sdf");
+	viewergrid_1734642417521027[1][0].addModel("SEVROA\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    1.9771    1.2609    5.8559 W   0  0  0  0  0  7  0  0  0  0  0  0\n    3.2467   -0.5425    3.1058 Se  0  0  0  0  0  4  0  0  0  0  0  0\n    3.6997    0.5888    7.2968 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.0574    1.9967    4.7404 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.9362    2.3179    7.8589 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.0415    3.2992    5.5388 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8364   -0.7053    6.4734 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.6644    0.4806    4.4836 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7878   -2.0388    4.1924 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.1498   -2.7294    3.6351 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0344   -2.3762    4.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4655   -1.7516    4.8186 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  8  2  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  1  2  0\n  9  2  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   1  -1\nM  END\n","sdf");
+	viewergrid_1734642417521027[1][1].addModel("SEVROA\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    1.9771    1.2609    5.8559 W   0  0  0  0  0  7  0  0  0  0  0  0\n    3.2467   -0.5425    3.1058 Se  0  0  0  0  0  4  0  0  0  0  0  0\n    3.6997    0.5888    7.2968 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.0574    1.9967    4.7404 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.9362    2.3179    7.8589 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.0415    3.2992    5.5388 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8364   -0.7053    6.4734 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.6644    0.4806    4.4836 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7878   -2.0388    4.1924 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.1498   -2.7294    3.6351 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0344   -2.3762    4.6777 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4655   -1.7516    4.8186 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  8  2  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  1  2  0\n  9  2  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   1  -1\nM  END\n","sdf");
+	viewergrid_1734642417521027[0][1].removeAllModels();
+	viewergrid_1734642417521027[0][1].addModel("SEVROA\n     RDKit          3D\n\n  9  8  0  0  0  0  0  0  0  0999 V2000\n    1.9771    1.2609    5.8559 W   0  0  0  0  0  7  0  0  0  0  0  0\n    3.2467   -0.5425    3.1058 Se  0  0  0  0  0  4  0  0  0  0  0  0\n    3.6997    0.5888    7.2968 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.0574    1.9967    4.7404 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.9362    2.3179    7.8589 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.0415    3.2992    5.5388 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8364   -0.7053    6.4734 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.6644    0.4806    4.4836 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7878   -2.0388    4.1924 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  8  2  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  1  2  0\n  9  2  1  1\nM  CHG  1   1  -1\nM  END\n","sdf_noHs");
+	viewergrid_1734642417521027[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417521027[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417521027[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417521027[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642417521027[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642417521027[0][1].setStyle({"stick": {}});
+	viewergrid_1734642417521027[1][0].setStyle({"stick": {}});
+	viewergrid_1734642417521027[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642417521027[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642417521027[0][0].setBackgroundColor("black");
+	viewergrid_1734642417521027[0][1].setBackgroundColor("black");
+	viewergrid_1734642417521027[1][0].setBackgroundColor("black");
+	viewergrid_1734642417521027[1][1].setBackgroundColor("black");
+	viewergrid_1734642417521027[0][0].addLabel("W",{"position": {"x": 1.9771, "y": 1.2609, "z": 5.8559}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417521027[1][0].addLabel("W",{"position": {"x": 1.9771, "y": 1.2609, "z": 5.8559}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417521027[0][1].addLabel("W",{"position": {"x": 1.9771, "y": 1.2609, "z": 5.8559}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417521027[1][1].addLabel("W",{"position": {"x": 1.9771, "y": 1.2609, "z": 5.8559}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642417521027[0][0].zoomTo();
+	viewergrid_1734642417521027[0][1].zoomTo();
+	viewergrid_1734642417521027[1][0].zoomTo();
+	viewergrid_1734642417521027[1][1].zoomTo();
+viewergrid_1734642417521027[1][1].render();
+viewergrid_1734642417521027[1][0].render();
+viewergrid_1734642417521027[0][1].render();
+viewergrid_1734642417521027[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: SEVROA</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: -1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: CH3Cl5NSeW(1-)</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

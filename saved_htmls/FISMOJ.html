@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642414593489"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642414593489" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642414593489 = null;
+var warn = document.getElementById("3dmolwarning_1734642414593489");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642414593489 = null;
+viewergrid_1734642414593489 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642414593489"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642414593489 = viewergrid_1734642414593489[0][0];
+viewergrid_1734642414593489[0][0].zoomTo();viewergrid_1734642414593489[0][1].zoomTo();viewergrid_1734642414593489[1][0].zoomTo();viewergrid_1734642414593489[1][1].zoomTo();	viewergrid_1734642414593489[0][0].addModel("FISMOJ\n     RDKit          3D\n\n 19 19  0  0  0  0  0  0  0  0999 V2000\n    0.0000    1.1051    2.2640 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    1.5505   -0.1568    1.2524 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    1.0396    2.7618    3.6043 S   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6141    4.1272    2.7086 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930    5.2388    2.7666 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4841    5.4375    3.5889 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0190    5.8619    2.3093 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1619    5.0327    4.5189 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6852    6.3217    3.6133 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2084    4.8849    3.3688 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5505   -0.1568    3.2756 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0396    2.7618    0.9237 S   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6141    4.1272    1.8194 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2930    5.2388    1.7614 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4841    5.4375    0.9391 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0190    5.8619    2.2187 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1619    5.0327    0.0091 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6851    6.3217    0.9147 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2084    4.8849    1.1592 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  6\n  3  1  1  0\n  4  3  2  0\n  5  4  1  0\n  6  5  1  0\n  7  5  1  0\n  6  8  1  1\n  9  6  1  0\n 10  6  1  0\n 11  1  1  0\n 12  1  1  0\n 13  4  1  0\n 14 13  1  0\n 15 14  1  0\n 16 14  1  0\n 15 17  1  6\n 18 15  1  0\n 19 15  1  0\n 12 13  2  0\nM  END\n","sdf");
+	viewergrid_1734642414593489[0][1].addModel("FISMOJ\n     RDKit          3D\n\n 19 19  0  0  0  0  0  0  0  0999 V2000\n    0.0000    1.1051    2.2640 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    1.5505   -0.1568    1.2524 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    1.0396    2.7618    3.6043 S   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6141    4.1272    2.7086 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930    5.2388    2.7666 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4841    5.4375    3.5889 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0190    5.8619    2.3093 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1619    5.0327    4.5189 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6852    6.3217    3.6133 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2084    4.8849    3.3688 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5505   -0.1568    3.2756 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0396    2.7618    0.9237 S   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6141    4.1272    1.8194 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2930    5.2388    1.7614 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4841    5.4375    0.9391 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0190    5.8619    2.2187 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1619    5.0327    0.0091 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6851    6.3217    0.9147 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2084    4.8849    1.1592 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  6\n  3  1  1  0\n  4  3  2  0\n  5  4  1  0\n  6  5  1  0\n  7  5  1  0\n  6  8  1  1\n  9  6  1  0\n 10  6  1  0\n 11  1  1  0\n 12  1  1  0\n 13  4  1  0\n 14 13  1  0\n 15 14  1  0\n 16 14  1  0\n 15 17  1  6\n 18 15  1  0\n 19 15  1  0\n 12 13  2  0\nM  END\n","sdf");
+	viewergrid_1734642414593489[1][0].addModel("FISMOJ\n     RDKit          3D\n\n 19 19  0  0  0  0  0  0  0  0999 V2000\n    0.0000    1.1051    2.2640 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    1.5505   -0.1568    1.2524 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    1.0396    2.7618    3.6043 S   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6141    4.1272    2.7086 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930    5.2388    2.7666 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4841    5.4375    3.5889 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0190    5.8619    2.3093 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1619    5.0327    4.5189 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6852    6.3217    3.6133 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2084    4.8849    3.3688 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5505   -0.1568    3.2756 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0396    2.7618    0.9237 S   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6141    4.1272    1.8194 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2930    5.2388    1.7614 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4841    5.4375    0.9391 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0190    5.8619    2.2187 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1619    5.0327    0.0091 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6851    6.3217    0.9147 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2084    4.8849    1.1592 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  6\n  3  1  1  0\n  4  3  2  0\n  5  4  1  0\n  6  5  1  0\n  7  5  1  0\n  6  8  1  1\n  9  6  1  0\n 10  6  1  0\n 11  1  1  0\n 12  1  1  0\n 13  4  1  0\n 14 13  1  0\n 15 14  1  0\n 16 14  1  0\n 15 17  1  6\n 18 15  1  0\n 19 15  1  0\n 12 13  2  0\nM  END\n","sdf");
+	viewergrid_1734642414593489[1][1].addModel("FISMOJ\n     RDKit          3D\n\n 19 19  0  0  0  0  0  0  0  0999 V2000\n    0.0000    1.1051    2.2640 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    1.5505   -0.1568    1.2524 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    1.0396    2.7618    3.6043 S   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6141    4.1272    2.7086 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930    5.2388    2.7666 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4841    5.4375    3.5889 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0190    5.8619    2.3093 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1619    5.0327    4.5189 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6852    6.3217    3.6133 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2084    4.8849    3.3688 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5505   -0.1568    3.2756 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0396    2.7618    0.9237 S   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6141    4.1272    1.8194 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2930    5.2388    1.7614 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4841    5.4375    0.9391 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0190    5.8619    2.2187 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1619    5.0327    0.0091 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6851    6.3217    0.9147 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.2084    4.8849    1.1592 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  6\n  3  1  1  0\n  4  3  2  0\n  5  4  1  0\n  6  5  1  0\n  7  5  1  0\n  6  8  1  1\n  9  6  1  0\n 10  6  1  0\n 11  1  1  0\n 12  1  1  0\n 13  4  1  0\n 14 13  1  0\n 15 14  1  0\n 16 14  1  0\n 15 17  1  6\n 18 15  1  0\n 19 15  1  0\n 12 13  2  0\nM  END\n","sdf");
+	viewergrid_1734642414593489[0][1].removeAllModels();
+	viewergrid_1734642414593489[0][1].addModel("FISMOJ\n     RDKit          3D\n\n 11 11  0  0  0  0  0  0  0  0999 V2000\n    0.0000    1.1051    2.2640 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    1.5505   -0.1568    1.2524 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    1.0396    2.7618    3.6043 S   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6141    4.1272    2.7086 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2930    5.2388    2.7666 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4841    5.4375    3.5889 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5505   -0.1568    3.2756 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0396    2.7618    0.9237 S   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6141    4.1272    1.8194 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2930    5.2388    1.7614 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.4841    5.4375    0.9391 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  6\n  3  1  1  0\n  4  3  2  0\n  5  4  1  0\n  6  5  1  1\n  7  1  1  0\n  8  1  1  0\n  9  4  1  0\n 10  9  1  0\n 11 10  1  1\n  8  9  2  0\nM  END\n","sdf_noHs");
+	viewergrid_1734642414593489[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642414593489[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642414593489[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642414593489[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642414593489[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642414593489[0][1].setStyle({"stick": {}});
+	viewergrid_1734642414593489[1][0].setStyle({"stick": {}});
+	viewergrid_1734642414593489[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642414593489[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642414593489[0][0].setBackgroundColor("black");
+	viewergrid_1734642414593489[0][1].setBackgroundColor("black");
+	viewergrid_1734642414593489[1][0].setBackgroundColor("black");
+	viewergrid_1734642414593489[1][1].setBackgroundColor("black");
+	viewergrid_1734642414593489[0][0].addLabel("Zn",{"position": {"x": 0.0, "y": 1.1051, "z": 2.264}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642414593489[1][0].addLabel("Zn",{"position": {"x": 0.0, "y": 1.1051, "z": 2.264}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642414593489[0][1].addLabel("Zn",{"position": {"x": 0.0, "y": 1.1051, "z": 2.264}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642414593489[1][1].addLabel("Zn",{"position": {"x": 0.0, "y": 1.1051, "z": 2.264}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642414593489[0][0].zoomTo();
+	viewergrid_1734642414593489[0][1].zoomTo();
+	viewergrid_1734642414593489[1][0].zoomTo();
+	viewergrid_1734642414593489[1][1].zoomTo();
+viewergrid_1734642414593489[1][1].render();
+viewergrid_1734642414593489[1][0].render();
+viewergrid_1734642414593489[0][1].render();
+viewergrid_1734642414593489[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: FISMOJ</li>
+<li><strong>Coord Num</strong>: 4</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C4H8Cl2N2S2Zn</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

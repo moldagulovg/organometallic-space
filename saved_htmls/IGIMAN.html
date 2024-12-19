@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424043122935"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424043122935" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424043122935 = null;
+var warn = document.getElementById("3dmolwarning_17346424043122935");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424043122935 = null;
+viewergrid_17346424043122935 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424043122935"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424043122935 = viewergrid_17346424043122935[0][0];
+viewergrid_17346424043122935[0][0].zoomTo();viewergrid_17346424043122935[0][1].zoomTo();viewergrid_17346424043122935[1][0].zoomTo();viewergrid_17346424043122935[1][1].zoomTo();	viewergrid_17346424043122935[0][0].addModel("IGIMAN\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n   11.5143    1.5650    3.3551 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.0779    0.3915    0.9697 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.1215    3.0705    1.1200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1853    2.6581   -0.3103 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.9433    3.0915   -0.6836 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9263    2.8661   -0.8703 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8333    3.4288   -1.6303 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8119    2.2570   -0.3273 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9461    2.4300   -0.6788 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9745    1.3972    0.7333 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2274    0.9437    1.1042 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2509    1.1980    1.2594 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5164    0.2857    2.3527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8363   -0.2683    2.7188 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8678    3.2996    3.4104 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    8.3390    1.8446    0.7624 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.7183    0.2648    2.8036 N   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6885   -0.3792    0.3770 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.3473    1.5379    4.1454 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6971    3.9050    0.5612 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8907   -0.6519    3.8375 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.6896   -0.6353    4.0957 H   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1259    1.6865    2.0064 Re  0  0  0  0  0  6  0  0  0  0  0  0\n  1 19  3  0\n  2 18  3  0\n  3 20  3  0\n  4  5  1  0\n  6  4  4  0\n  7  6  1  0\n  8  6  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12 10  4  0\n 13 12  1  0\n 14 13  1  0\n 15 23  1  0\n 16  4  4  0\n 17 13  2  0\n 21 17  1  0\n 22 21  1  0\n 23  1  1  0\n  2 23  1  0\n  3 23  1  0\n 12 16  4  0\n 16 23  1  0\n 17 23  1  0\nM  END\n","sdf");
+	viewergrid_17346424043122935[0][1].addModel("IGIMAN\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n   11.5143    1.5650    3.3551 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.0779    0.3915    0.9697 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.1215    3.0705    1.1200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1853    2.6581   -0.3103 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.9433    3.0915   -0.6836 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9263    2.8661   -0.8703 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8333    3.4288   -1.6303 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8119    2.2570   -0.3273 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9461    2.4300   -0.6788 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9745    1.3972    0.7333 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2274    0.9437    1.1042 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2509    1.1980    1.2594 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5164    0.2857    2.3527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8363   -0.2683    2.7188 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8678    3.2996    3.4104 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    8.3390    1.8446    0.7624 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.7183    0.2648    2.8036 N   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6885   -0.3792    0.3770 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.3473    1.5379    4.1454 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6971    3.9050    0.5612 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8907   -0.6519    3.8375 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.6896   -0.6353    4.0957 H   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1259    1.6865    2.0064 Re  0  0  0  0  0  6  0  0  0  0  0  0\n  1 19  3  0\n  2 18  3  0\n  3 20  3  0\n  4  5  1  0\n  6  4  4  0\n  7  6  1  0\n  8  6  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12 10  4  0\n 13 12  1  0\n 14 13  1  0\n 15 23  1  0\n 16  4  4  0\n 17 13  2  0\n 21 17  1  0\n 22 21  1  0\n 23  1  1  0\n  2 23  1  0\n  3 23  1  0\n 12 16  4  0\n 16 23  1  0\n 17 23  1  0\nM  END\n","sdf");
+	viewergrid_17346424043122935[1][0].addModel("IGIMAN\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n   11.5143    1.5650    3.3551 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.0779    0.3915    0.9697 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.1215    3.0705    1.1200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1853    2.6581   -0.3103 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.9433    3.0915   -0.6836 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9263    2.8661   -0.8703 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8333    3.4288   -1.6303 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8119    2.2570   -0.3273 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9461    2.4300   -0.6788 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9745    1.3972    0.7333 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2274    0.9437    1.1042 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2509    1.1980    1.2594 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5164    0.2857    2.3527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8363   -0.2683    2.7188 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8678    3.2996    3.4104 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    8.3390    1.8446    0.7624 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.7183    0.2648    2.8036 N   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6885   -0.3792    0.3770 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.3473    1.5379    4.1454 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6971    3.9050    0.5612 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8907   -0.6519    3.8375 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.6896   -0.6353    4.0957 H   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1259    1.6865    2.0064 Re  0  0  0  0  0  6  0  0  0  0  0  0\n  1 19  3  0\n  2 18  3  0\n  3 20  3  0\n  4  5  1  0\n  6  4  4  0\n  7  6  1  0\n  8  6  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12 10  4  0\n 13 12  1  0\n 14 13  1  0\n 15 23  1  0\n 16  4  4  0\n 17 13  2  0\n 21 17  1  0\n 22 21  1  0\n 23  1  1  0\n  2 23  1  0\n  3 23  1  0\n 12 16  4  0\n 16 23  1  0\n 17 23  1  0\nM  END\n","sdf");
+	viewergrid_17346424043122935[1][1].addModel("IGIMAN\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n   11.5143    1.5650    3.3551 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.0779    0.3915    0.9697 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.1215    3.0705    1.1200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1853    2.6581   -0.3103 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.9433    3.0915   -0.6836 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9263    2.8661   -0.8703 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8333    3.4288   -1.6303 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8119    2.2570   -0.3273 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9461    2.4300   -0.6788 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9745    1.3972    0.7333 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2274    0.9437    1.1042 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2509    1.1980    1.2594 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5164    0.2857    2.3527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.8363   -0.2683    2.7188 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8678    3.2996    3.4104 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    8.3390    1.8446    0.7624 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.7183    0.2648    2.8036 N   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6885   -0.3792    0.3770 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.3473    1.5379    4.1454 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6971    3.9050    0.5612 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8907   -0.6519    3.8375 O   0  0  0  0  0  0  0  0  0  0  0  0\n    9.6896   -0.6353    4.0957 H   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1259    1.6865    2.0064 Re  0  0  0  0  0  6  0  0  0  0  0  0\n  1 19  3  0\n  2 18  3  0\n  3 20  3  0\n  4  5  1  0\n  6  4  4  0\n  7  6  1  0\n  8  6  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12 10  4  0\n 13 12  1  0\n 14 13  1  0\n 15 23  1  0\n 16  4  4  0\n 17 13  2  0\n 21 17  1  0\n 22 21  1  0\n 23  1  1  0\n  2 23  1  0\n  3 23  1  0\n 12 16  4  0\n 16 23  1  0\n 17 23  1  0\nM  END\n","sdf");
+	viewergrid_17346424043122935[0][1].removeAllModels();
+	viewergrid_17346424043122935[0][1].addModel("IGIMAN\n     RDKit          3D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n   11.5143    1.5650    3.3551 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.0779    0.3915    0.9697 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.1215    3.0705    1.1200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1853    2.6581   -0.3103 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9263    2.8661   -0.8703 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8119    2.2570   -0.3273 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9745    1.3972    0.7333 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2509    1.1980    1.2594 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5164    0.2857    2.3527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8678    3.2996    3.4104 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    8.3390    1.8446    0.7624 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.7183    0.2648    2.8036 N   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6885   -0.3792    0.3770 O   0  0  0  0  0  0  0  0  0  0  0  0\n   12.3473    1.5379    4.1454 O   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6971    3.9050    0.5612 O   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8907   -0.6519    3.8375 O   0  0  0  0  0  0  0  0  0  0  0  0\n   10.1259    1.6865    2.0064 Re  0  0  0  0  0  6  0  0  0  0  0  0\n  1 14  3  0\n  2 13  3  0\n  3 15  3  0\n  5  4  4  0\n  6  5  4  0\n  7  6  4  0\n  8  7  4  0\n  9  8  1  0\n 10 17  1  0\n 11  4  4  0\n 12  9  2  0\n 16 12  1  0\n 17  1  1  0\n  2 17  1  0\n  3 17  1  0\n  8 11  4  0\n 11 17  1  0\n 12 17  1  0\nM  END\n","sdf_noHs");
+	viewergrid_17346424043122935[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424043122935[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424043122935[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424043122935[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424043122935[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424043122935[0][1].setStyle({"stick": {}});
+	viewergrid_17346424043122935[1][0].setStyle({"stick": {}});
+	viewergrid_17346424043122935[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424043122935[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424043122935[0][0].setBackgroundColor("black");
+	viewergrid_17346424043122935[0][1].setBackgroundColor("black");
+	viewergrid_17346424043122935[1][0].setBackgroundColor("black");
+	viewergrid_17346424043122935[1][1].setBackgroundColor("black");
+	viewergrid_17346424043122935[0][0].addLabel("Re",{"position": {"x": 10.1259, "y": 1.6865, "z": 2.0064}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424043122935[1][0].addLabel("Re",{"position": {"x": 10.1259, "y": 1.6865, "z": 2.0064}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424043122935[0][1].addLabel("Re",{"position": {"x": 10.1259, "y": 1.6865, "z": 2.0064}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424043122935[1][1].addLabel("Re",{"position": {"x": 10.1259, "y": 1.6865, "z": 2.0064}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424043122935[0][0].zoomTo();
+	viewergrid_17346424043122935[0][1].zoomTo();
+	viewergrid_17346424043122935[1][0].zoomTo();
+	viewergrid_17346424043122935[1][1].zoomTo();
+viewergrid_17346424043122935[1][1].render();
+viewergrid_17346424043122935[1][0].render();
+viewergrid_17346424043122935[0][1].render();
+viewergrid_17346424043122935[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: IGIMAN</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C9H6ClN2O4Re</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424211234164"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424211234164" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424211234164 = null;
+var warn = document.getElementById("3dmolwarning_17346424211234164");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424211234164 = null;
+viewergrid_17346424211234164 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424211234164"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424211234164 = viewergrid_17346424211234164[0][0];
+viewergrid_17346424211234164[0][0].zoomTo();viewergrid_17346424211234164[0][1].zoomTo();viewergrid_17346424211234164[1][0].zoomTo();viewergrid_17346424211234164[1][1].zoomTo();	viewergrid_17346424211234164[0][0].addModel("AMIHAG\n     RDKit          3D\n\n 26 31  0  0  0  0  0  0  0  0999 V2000\n    2.7107    6.7556    1.4423 Co  0  0  0  0  0  7  0  0  0  0  0  0\n    3.7935    7.1225    3.1994 S   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0849    5.2779    0.8264 S   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9445    6.6965    5.2646 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1775    5.3323    3.9870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1453    6.0783    3.1171 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2686    5.2530    2.0512 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1074    6.0978    4.2325 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1450    5.1883    5.0573 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.7549    4.0797    5.9593 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.7971    8.4767    0.8994 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0162    7.7986    1.8474 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.7015    6.5590    1.2914 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.2619    6.4975    0.0408 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.9304    7.6481   -0.2108 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0006    4.6494    1.9957 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0004    5.0070    4.6852 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1843    5.9909    5.5647 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1926    4.4066    6.6514 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5202    3.6654    6.3418 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2782    3.4437    5.4389 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1666    9.3473    0.9913 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7520    8.1320    2.6973 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1781    5.8858    1.7103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1964    5.7579   -0.5533 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4101    7.8520   -1.0043 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  6  1  0\n  3  1  1  0\n  4  8  2  0\n  5  8  1  0\n  6  7  2  0\n  7  3  1  0\n  8  6  1  0\n  9  5  1  0\n 10  9  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n 14  1  1  0\n 15  1  1  0\n 16  7  1  0\n  9 17  1  6\n 18  9  1  0\n 10 19  1  1\n 20 10  1  0\n 21 10  1  0\n 11 22  1  6\n 12 23  1  1\n 13 24  1  1\n 14 25  1  6\n 15 26  1  6\n 11 12  4  0\n 11 15  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  END\n","sdf");
+	viewergrid_17346424211234164[0][1].addModel("AMIHAG\n     RDKit          3D\n\n 26 31  0  0  0  0  0  0  0  0999 V2000\n    2.7107    6.7556    1.4423 Co  0  0  0  0  0  7  0  0  0  0  0  0\n    3.7935    7.1225    3.1994 S   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0849    5.2779    0.8264 S   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9445    6.6965    5.2646 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1775    5.3323    3.9870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1453    6.0783    3.1171 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2686    5.2530    2.0512 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1074    6.0978    4.2325 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1450    5.1883    5.0573 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.7549    4.0797    5.9593 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.7971    8.4767    0.8994 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0162    7.7986    1.8474 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.7015    6.5590    1.2914 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.2619    6.4975    0.0408 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.9304    7.6481   -0.2108 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0006    4.6494    1.9957 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0004    5.0070    4.6852 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1843    5.9909    5.5647 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1926    4.4066    6.6514 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5202    3.6654    6.3418 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2782    3.4437    5.4389 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1666    9.3473    0.9913 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7520    8.1320    2.6973 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1781    5.8858    1.7103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1964    5.7579   -0.5533 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4101    7.8520   -1.0043 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  6  1  0\n  3  1  1  0\n  4  8  2  0\n  5  8  1  0\n  6  7  2  0\n  7  3  1  0\n  8  6  1  0\n  9  5  1  0\n 10  9  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n 14  1  1  0\n 15  1  1  0\n 16  7  1  0\n  9 17  1  6\n 18  9  1  0\n 10 19  1  1\n 20 10  1  0\n 21 10  1  0\n 11 22  1  6\n 12 23  1  1\n 13 24  1  1\n 14 25  1  6\n 15 26  1  6\n 11 12  4  0\n 11 15  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  END\n","sdf");
+	viewergrid_17346424211234164[1][0].addModel("AMIHAG\n     RDKit          3D\n\n 26 31  0  0  0  0  0  0  0  0999 V2000\n    2.7107    6.7556    1.4423 Co  0  0  0  0  0  7  0  0  0  0  0  0\n    3.7935    7.1225    3.1994 S   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0849    5.2779    0.8264 S   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9445    6.6965    5.2646 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1775    5.3323    3.9870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1453    6.0783    3.1171 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2686    5.2530    2.0512 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1074    6.0978    4.2325 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1450    5.1883    5.0573 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.7549    4.0797    5.9593 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.7971    8.4767    0.8994 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0162    7.7986    1.8474 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.7015    6.5590    1.2914 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.2619    6.4975    0.0408 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.9304    7.6481   -0.2108 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0006    4.6494    1.9957 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0004    5.0070    4.6852 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1843    5.9909    5.5647 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1926    4.4066    6.6514 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5202    3.6654    6.3418 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2782    3.4437    5.4389 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1666    9.3473    0.9913 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7520    8.1320    2.6973 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1781    5.8858    1.7103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1964    5.7579   -0.5533 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4101    7.8520   -1.0043 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  6  1  0\n  3  1  1  0\n  4  8  2  0\n  5  8  1  0\n  6  7  2  0\n  7  3  1  0\n  8  6  1  0\n  9  5  1  0\n 10  9  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n 14  1  1  0\n 15  1  1  0\n 16  7  1  0\n  9 17  1  6\n 18  9  1  0\n 10 19  1  1\n 20 10  1  0\n 21 10  1  0\n 11 22  1  6\n 12 23  1  1\n 13 24  1  1\n 14 25  1  6\n 15 26  1  6\n 11 12  4  0\n 11 15  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  END\n","sdf");
+	viewergrid_17346424211234164[1][1].addModel("AMIHAG\n     RDKit          3D\n\n 26 31  0  0  0  0  0  0  0  0999 V2000\n    2.7107    6.7556    1.4423 Co  0  0  0  0  0  7  0  0  0  0  0  0\n    3.7935    7.1225    3.1994 S   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0849    5.2779    0.8264 S   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9445    6.6965    5.2646 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1775    5.3323    3.9870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1453    6.0783    3.1171 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2686    5.2530    2.0512 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1074    6.0978    4.2325 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1450    5.1883    5.0573 C   0  0  1  0  0  0  0  0  0  0  0  0\n    7.7549    4.0797    5.9593 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.7971    8.4767    0.8994 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0162    7.7986    1.8474 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.7015    6.5590    1.2914 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.2619    6.4975    0.0408 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.9304    7.6481   -0.2108 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0006    4.6494    1.9957 H   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0004    5.0070    4.6852 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1843    5.9909    5.5647 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1926    4.4066    6.6514 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.5202    3.6654    6.3418 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2782    3.4437    5.4389 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1666    9.3473    0.9913 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7520    8.1320    2.6973 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1781    5.8858    1.7103 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1964    5.7579   -0.5533 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4101    7.8520   -1.0043 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  6  1  0\n  3  1  1  0\n  4  8  2  0\n  5  8  1  0\n  6  7  2  0\n  7  3  1  0\n  8  6  1  0\n  9  5  1  0\n 10  9  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n 14  1  1  0\n 15  1  1  0\n 16  7  1  0\n  9 17  1  6\n 18  9  1  0\n 10 19  1  1\n 20 10  1  0\n 21 10  1  0\n 11 22  1  6\n 12 23  1  1\n 13 24  1  1\n 14 25  1  6\n 15 26  1  6\n 11 12  4  0\n 11 15  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  END\n","sdf");
+	viewergrid_17346424211234164[0][1].removeAllModels();
+	viewergrid_17346424211234164[0][1].addModel("AMIHAG\n     RDKit          3D\n\n 15 20  0  0  0  0  0  0  0  0999 V2000\n    2.7107    6.7556    1.4423 Co  0  0  0  0  0  7  0  0  0  0  0  0\n    3.7935    7.1225    3.1994 S   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0849    5.2779    0.8264 S   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9445    6.6965    5.2646 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1775    5.3323    3.9870 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1453    6.0783    3.1171 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2686    5.2530    2.0512 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1074    6.0978    4.2325 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1450    5.1883    5.0573 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7549    4.0797    5.9593 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.7971    8.4767    0.8994 C   0  0  2  0  0  0  0  0  0  0  0  0\n    1.0162    7.7986    1.8474 C   0  0  1  0  0  0  0  0  0  0  0  0\n    0.7015    6.5590    1.2914 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.2619    6.4975    0.0408 C   0  0  1  0  0  0  0  0  0  0  0  0\n    1.9304    7.6481   -0.2108 C   0  0  2  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  6  1  0\n  3  1  1  0\n  4  8  2  0\n  5  8  1  0\n  6  7  2  0\n  7  3  1  0\n  8  6  1  0\n  9  5  1  6\n 10  9  1  1\n 11  1  1  1\n 12  1  1  1\n 13  1  1  1\n 14  1  1  1\n 15  1  1  1\n 11 12  4  0\n 11 15  4  0\n 12 13  4  0\n 13 14  4  0\n 14 15  4  0\nM  END\n","sdf_noHs");
+	viewergrid_17346424211234164[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424211234164[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424211234164[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424211234164[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424211234164[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424211234164[0][1].setStyle({"stick": {}});
+	viewergrid_17346424211234164[1][0].setStyle({"stick": {}});
+	viewergrid_17346424211234164[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424211234164[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424211234164[0][0].setBackgroundColor("black");
+	viewergrid_17346424211234164[0][1].setBackgroundColor("black");
+	viewergrid_17346424211234164[1][0].setBackgroundColor("black");
+	viewergrid_17346424211234164[1][1].setBackgroundColor("black");
+	viewergrid_17346424211234164[0][0].addLabel("Co",{"position": {"x": 2.7107, "y": 6.7556, "z": 1.4423}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424211234164[1][0].addLabel("Co",{"position": {"x": 2.7107, "y": 6.7556, "z": 1.4423}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424211234164[0][1].addLabel("Co",{"position": {"x": 2.7107, "y": 6.7556, "z": 1.4423}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424211234164[1][1].addLabel("Co",{"position": {"x": 2.7107, "y": 6.7556, "z": 1.4423}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424211234164[0][0].zoomTo();
+	viewergrid_17346424211234164[0][1].zoomTo();
+	viewergrid_17346424211234164[1][0].zoomTo();
+	viewergrid_17346424211234164[1][1].zoomTo();
+viewergrid_17346424211234164[1][1].render();
+viewergrid_17346424211234164[1][0].render();
+viewergrid_17346424211234164[0][1].render();
+viewergrid_17346424211234164[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: AMIHAG</li>
+<li><strong>Coord Num</strong>: 7</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C10H11CoO2S2</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

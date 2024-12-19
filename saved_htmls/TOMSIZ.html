@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642419542822"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642419542822" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642419542822 = null;
+var warn = document.getElementById("3dmolwarning_1734642419542822");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642419542822 = null;
+viewergrid_1734642419542822 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642419542822"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642419542822 = viewergrid_1734642419542822[0][0];
+viewergrid_1734642419542822[0][0].zoomTo();viewergrid_1734642419542822[0][1].zoomTo();viewergrid_1734642419542822[1][0].zoomTo();viewergrid_1734642419542822[1][1].zoomTo();	viewergrid_1734642419542822[0][0].addModel("TOMSIZ\n     RDKit          3D\n\n 25 25  0  0  0  0  0  0  0  0999 V2000\n    4.7515    5.6458    1.2509 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1106    6.1694    0.7841 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0836    5.9571    1.1331 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3566    6.6706    0.5665 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0147    5.2436    1.8265 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9321    5.4902    1.8016 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.5840    4.1280    2.5811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2336    3.8526    2.6400 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9366    3.0996    3.1386 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5539    3.2183    3.3131 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6642    4.2953    4.3623 N   0  0  2  0  0  0  0  0  0  0  0  0\n    3.5519    4.3970    4.5322 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3912    3.4775    4.6523 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1958    4.9440    4.7951 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3393    4.3223    2.7103 N   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.0971    4.1981    1.9217 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0514    5.0934    3.0978 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1702    3.6214    3.2655 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3265    4.6174    2.0146 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6701    3.7573    3.7572 N   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2631    3.2597    4.1764 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8232    4.6147    3.6348 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2592    2.0298    3.4422 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8782    4.5484    0.1199 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.3361    4.4440    2.3645 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n  1  2  1  0\n  3  1  4  0\n  4  3  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  7  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 15 16  1  6\n 17 15  1  0\n 18 15  1  0\n 19  1  4  0\n 20 10  1  0\n 21 20  1  0\n 22 20  1  0\n 23 10  2  0\n 24 25  1  0\n 25 11  1  0\n  8 19  4  0\n 15 25  1  0\n 19 25  1  0\nM  CHG  1  25   1\nM  END\n","sdf");
+	viewergrid_1734642419542822[0][1].addModel("TOMSIZ\n     RDKit          3D\n\n 25 25  0  0  0  0  0  0  0  0999 V2000\n    4.7515    5.6458    1.2509 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1106    6.1694    0.7841 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0836    5.9571    1.1331 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3566    6.6706    0.5665 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0147    5.2436    1.8265 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9321    5.4902    1.8016 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.5840    4.1280    2.5811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2336    3.8526    2.6400 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9366    3.0996    3.1386 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5539    3.2183    3.3131 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6642    4.2953    4.3623 N   0  0  2  0  0  0  0  0  0  0  0  0\n    3.5519    4.3970    4.5322 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3912    3.4775    4.6523 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1958    4.9440    4.7951 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3393    4.3223    2.7103 N   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.0971    4.1981    1.9217 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0514    5.0934    3.0978 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1702    3.6214    3.2655 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3265    4.6174    2.0146 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6701    3.7573    3.7572 N   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2631    3.2597    4.1764 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8232    4.6147    3.6348 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2592    2.0298    3.4422 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8782    4.5484    0.1199 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.3361    4.4440    2.3645 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n  1  2  1  0\n  3  1  4  0\n  4  3  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  7  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 15 16  1  6\n 17 15  1  0\n 18 15  1  0\n 19  1  4  0\n 20 10  1  0\n 21 20  1  0\n 22 20  1  0\n 23 10  2  0\n 24 25  1  0\n 25 11  1  0\n  8 19  4  0\n 15 25  1  0\n 19 25  1  0\nM  CHG  1  25   1\nM  END\n","sdf");
+	viewergrid_1734642419542822[1][0].addModel("TOMSIZ\n     RDKit          3D\n\n 25 25  0  0  0  0  0  0  0  0999 V2000\n    4.7515    5.6458    1.2509 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1106    6.1694    0.7841 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0836    5.9571    1.1331 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3566    6.6706    0.5665 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0147    5.2436    1.8265 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9321    5.4902    1.8016 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.5840    4.1280    2.5811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2336    3.8526    2.6400 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9366    3.0996    3.1386 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5539    3.2183    3.3131 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6642    4.2953    4.3623 N   0  0  2  0  0  0  0  0  0  0  0  0\n    3.5519    4.3970    4.5322 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3912    3.4775    4.6523 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1958    4.9440    4.7951 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3393    4.3223    2.7103 N   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.0971    4.1981    1.9217 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0514    5.0934    3.0978 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1702    3.6214    3.2655 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3265    4.6174    2.0146 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6701    3.7573    3.7572 N   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2631    3.2597    4.1764 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8232    4.6147    3.6348 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2592    2.0298    3.4422 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8782    4.5484    0.1199 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.3361    4.4440    2.3645 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n  1  2  1  0\n  3  1  4  0\n  4  3  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  7  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 15 16  1  6\n 17 15  1  0\n 18 15  1  0\n 19  1  4  0\n 20 10  1  0\n 21 20  1  0\n 22 20  1  0\n 23 10  2  0\n 24 25  1  0\n 25 11  1  0\n  8 19  4  0\n 15 25  1  0\n 19 25  1  0\nM  CHG  1  25   1\nM  END\n","sdf");
+	viewergrid_1734642419542822[1][1].addModel("TOMSIZ\n     RDKit          3D\n\n 25 25  0  0  0  0  0  0  0  0999 V2000\n    4.7515    5.6458    1.2509 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1106    6.1694    0.7841 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0836    5.9571    1.1331 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3566    6.6706    0.5665 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0147    5.2436    1.8265 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9321    5.4902    1.8016 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.5840    4.1280    2.5811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2336    3.8526    2.6400 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9366    3.0996    3.1386 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5539    3.2183    3.3131 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6642    4.2953    4.3623 N   0  0  2  0  0  0  0  0  0  0  0  0\n    3.5519    4.3970    4.5322 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3912    3.4775    4.6523 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1958    4.9440    4.7951 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3393    4.3223    2.7103 N   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.0971    4.1981    1.9217 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0514    5.0934    3.0978 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1702    3.6214    3.2655 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3265    4.6174    2.0146 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6701    3.7573    3.7572 N   0  0  0  0  0  0  0  0  0  0  0  0\n    9.2631    3.2597    4.1764 H   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8232    4.6147    3.6348 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2592    2.0298    3.4422 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8782    4.5484    0.1199 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.3361    4.4440    2.3645 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n  1  2  1  0\n  3  1  4  0\n  4  3  1  0\n  5  3  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  7  1  0\n 11 12  1  6\n 13 11  1  0\n 14 11  1  0\n 15 16  1  6\n 17 15  1  0\n 18 15  1  0\n 19  1  4  0\n 20 10  1  0\n 21 20  1  0\n 22 20  1  0\n 23 10  2  0\n 24 25  1  0\n 25 11  1  0\n  8 19  4  0\n 15 25  1  0\n 19 25  1  0\nM  CHG  1  25   1\nM  END\n","sdf");
+	viewergrid_1734642419542822[0][1].removeAllModels();
+	viewergrid_1734642419542822[0][1].addModel("TOMSIZ\n     RDKit          3D\n\n 13 13  0  0  0  0  0  0  0  0999 V2000\n    4.7515    5.6458    1.2509 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.0836    5.9571    1.1331 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0147    5.2436    1.8265 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.5840    4.1280    2.5811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2336    3.8526    2.6400 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5539    3.2183    3.3131 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6642    4.2953    4.3623 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3393    4.3223    2.7103 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3265    4.6174    2.0146 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6701    3.7573    3.7572 N   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2592    2.0298    3.4422 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8782    4.5484    0.1199 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.3361    4.4440    2.3645 Pt  0  0  1  0  0  4  0  0  0  0  0  0\n  2  1  4  0\n  3  2  4  0\n  4  3  4  0\n  5  4  4  0\n  6  4  1  0\n  9  1  4  0\n 10  6  1  0\n 11  6  2  0\n 12 13  1  0\n  7 13  1  1\n  5  9  4  0\n  8 13  1  1\n  9 13  1  0\nM  CHG  1  13   1\nM  END\n","sdf_noHs");
+	viewergrid_1734642419542822[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642419542822[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642419542822[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642419542822[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642419542822[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642419542822[0][1].setStyle({"stick": {}});
+	viewergrid_1734642419542822[1][0].setStyle({"stick": {}});
+	viewergrid_1734642419542822[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642419542822[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642419542822[0][0].setBackgroundColor("black");
+	viewergrid_1734642419542822[0][1].setBackgroundColor("black");
+	viewergrid_1734642419542822[1][0].setBackgroundColor("black");
+	viewergrid_1734642419542822[1][1].setBackgroundColor("black");
+	viewergrid_1734642419542822[0][0].addLabel("Pt",{"position": {"x": 2.3361, "y": 4.444, "z": 2.3645}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642419542822[1][0].addLabel("Pt",{"position": {"x": 2.3361, "y": 4.444, "z": 2.3645}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642419542822[0][1].addLabel("Pt",{"position": {"x": 2.3361, "y": 4.444, "z": 2.3645}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642419542822[1][1].addLabel("Pt",{"position": {"x": 2.3361, "y": 4.444, "z": 2.3645}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642419542822[0][0].zoomTo();
+	viewergrid_1734642419542822[0][1].zoomTo();
+	viewergrid_1734642419542822[1][0].zoomTo();
+	viewergrid_1734642419542822[1][1].zoomTo();
+viewergrid_1734642419542822[1][1].render();
+viewergrid_1734642419542822[1][0].render();
+viewergrid_1734642419542822[0][1].render();
+viewergrid_1734642419542822[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: TOMSIZ</li>
+<li><strong>Coord Num</strong>: 4</li>
+<li><strong>Charge</strong>: 1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C6H12ClN4OPt(1+)</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

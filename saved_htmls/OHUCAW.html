@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424099865391"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424099865391" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424099865391 = null;
+var warn = document.getElementById("3dmolwarning_17346424099865391");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424099865391 = null;
+viewergrid_17346424099865391 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424099865391"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424099865391 = viewergrid_17346424099865391[0][0];
+viewergrid_17346424099865391[0][0].zoomTo();viewergrid_17346424099865391[0][1].zoomTo();viewergrid_17346424099865391[1][0].zoomTo();viewergrid_17346424099865391[1][1].zoomTo();	viewergrid_17346424099865391[0][0].addModel("OHUCAW\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    2.1301    5.0727    3.2587 Ti  0  0  0  0  0  6  0  0  0  0  0  0\n    3.1257    4.3292    1.2678 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8855    6.0108    4.9544 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.5337    3.4290    2.9825 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.5261    6.9158    3.1832 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.4617    3.8588    4.6098 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8450    6.3046    1.9226 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1956    7.0319    1.3362 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6181    7.9725    0.5826 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.3873    8.1161   -0.2096 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7133    8.7509    0.9919 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3705    7.6271    0.4471 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  7  3  0\n  9  8  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   2  -1\nM  END\n","sdf");
+	viewergrid_17346424099865391[0][1].addModel("OHUCAW\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    2.1301    5.0727    3.2587 Ti  0  0  0  0  0  6  0  0  0  0  0  0\n    3.1257    4.3292    1.2678 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8855    6.0108    4.9544 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.5337    3.4290    2.9825 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.5261    6.9158    3.1832 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.4617    3.8588    4.6098 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8450    6.3046    1.9226 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1956    7.0319    1.3362 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6181    7.9725    0.5826 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.3873    8.1161   -0.2096 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7133    8.7509    0.9919 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3705    7.6271    0.4471 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  7  3  0\n  9  8  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   2  -1\nM  END\n","sdf");
+	viewergrid_17346424099865391[1][0].addModel("OHUCAW\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    2.1301    5.0727    3.2587 Ti  0  0  0  0  0  6  0  0  0  0  0  0\n    3.1257    4.3292    1.2678 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8855    6.0108    4.9544 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.5337    3.4290    2.9825 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.5261    6.9158    3.1832 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.4617    3.8588    4.6098 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8450    6.3046    1.9226 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1956    7.0319    1.3362 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6181    7.9725    0.5826 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.3873    8.1161   -0.2096 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7133    8.7509    0.9919 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3705    7.6271    0.4471 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  7  3  0\n  9  8  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   2  -1\nM  END\n","sdf");
+	viewergrid_17346424099865391[1][1].addModel("OHUCAW\n     RDKit          3D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n    2.1301    5.0727    3.2587 Ti  0  0  0  0  0  6  0  0  0  0  0  0\n    3.1257    4.3292    1.2678 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8855    6.0108    4.9544 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.5337    3.4290    2.9825 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.5261    6.9158    3.1832 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.4617    3.8588    4.6098 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8450    6.3046    1.9226 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1956    7.0319    1.3362 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6181    7.9725    0.5826 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -0.3873    8.1161   -0.2096 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7133    8.7509    0.9919 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3705    7.6271    0.4471 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  7  3  0\n  9  8  1  0\n  9 10  1  6\n 11  9  1  0\n 12  9  1  0\nM  CHG  1   2  -1\nM  END\n","sdf");
+	viewergrid_17346424099865391[0][1].removeAllModels();
+	viewergrid_17346424099865391[0][1].addModel("OHUCAW\n     RDKit          3D\n\n  9  8  0  0  0  0  0  0  0  0999 V2000\n    2.1301    5.0727    3.2587 Ti  0  0  0  0  0  6  0  0  0  0  0  0\n    3.1257    4.3292    1.2678 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8855    6.0108    4.9544 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.5337    3.4290    2.9825 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.5261    6.9158    3.1832 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.4617    3.8588    4.6098 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.8450    6.3046    1.9226 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1956    7.0319    1.3362 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6181    7.9725    0.5826 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6  1  1  0\n  7  1  1  0\n  8  7  3  0\n  9  8  1  1\nM  CHG  1   2  -1\nM  END\n","sdf_noHs");
+	viewergrid_17346424099865391[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424099865391[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424099865391[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424099865391[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424099865391[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424099865391[0][1].setStyle({"stick": {}});
+	viewergrid_17346424099865391[1][0].setStyle({"stick": {}});
+	viewergrid_17346424099865391[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424099865391[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424099865391[0][0].setBackgroundColor("black");
+	viewergrid_17346424099865391[0][1].setBackgroundColor("black");
+	viewergrid_17346424099865391[1][0].setBackgroundColor("black");
+	viewergrid_17346424099865391[1][1].setBackgroundColor("black");
+	viewergrid_17346424099865391[0][0].addLabel("Ti",{"position": {"x": 2.1301, "y": 5.0727, "z": 3.2587}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424099865391[1][0].addLabel("Ti",{"position": {"x": 2.1301, "y": 5.0727, "z": 3.2587}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424099865391[0][1].addLabel("Ti",{"position": {"x": 2.1301, "y": 5.0727, "z": 3.2587}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424099865391[1][1].addLabel("Ti",{"position": {"x": 2.1301, "y": 5.0727, "z": 3.2587}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424099865391[0][0].zoomTo();
+	viewergrid_17346424099865391[0][1].zoomTo();
+	viewergrid_17346424099865391[1][0].zoomTo();
+	viewergrid_17346424099865391[1][1].zoomTo();
+viewergrid_17346424099865391[1][1].render();
+viewergrid_17346424099865391[1][0].render();
+viewergrid_17346424099865391[0][1].render();
+viewergrid_17346424099865391[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: OHUCAW</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: -1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C2H3Cl5NTi(1-)</li>
+<li><strong>Source</strong>: 2020-2024 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

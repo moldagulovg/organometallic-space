@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424253932352"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424253932352" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424253932352 = null;
+var warn = document.getElementById("3dmolwarning_17346424253932352");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424253932352 = null;
+viewergrid_17346424253932352 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424253932352"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424253932352 = viewergrid_17346424253932352[0][0];
+viewergrid_17346424253932352[0][0].zoomTo();viewergrid_17346424253932352[0][1].zoomTo();viewergrid_17346424253932352[1][0].zoomTo();viewergrid_17346424253932352[1][1].zoomTo();	viewergrid_17346424253932352[0][0].addModel("HOBWEB\n     RDKit          3D\n\n 23 23  0  0  0  0  0  0  0  0999 V2000\n    2.2619    4.4948   12.1790 W   0  0  0  0  0  7  0  0  0  0  0  0\n    1.2273    2.3979   12.2120 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.8787    3.7193   13.6457 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.3643    5.4184   11.1927 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.9920    6.6675   12.6014 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.7330    3.8480    9.5200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5071    2.7462    8.3857 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2798    2.2283    8.4034 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7951    3.8421    7.1363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3891    4.0445    6.3250 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9627    2.6857    5.3938 I   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1243    4.1941   10.7178 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9901    3.1480    7.1747 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9106    3.0947    9.5613 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2762    2.8349   10.3755 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2042    4.2266    8.3547 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4345    4.7513    8.3473 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0780    4.7929   14.0676 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4794    4.9155   15.0294 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2898    5.0741   16.2389 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0805    5.5831   16.0516 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2393    5.5335   16.8953 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5365    4.2100   16.5767 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6 12  1  0\n  7  8  1  0\n  9 10  1  0\n 11 13  1  0\n 12  1  2  0\n 13  7  4  0\n 14  6  4  0\n 15 14  1  0\n 16  6  4  0\n 17 16  1  0\n 18  1  1  0\n 19 18  3  0\n 20 19  1  0\n 20 21  1  6\n 22 20  1  0\n 23 20  1  0\n  7 14  4  0\n  9 13  4  0\n  9 16  4  0\nM  END\n","sdf");
+	viewergrid_17346424253932352[0][1].addModel("HOBWEB\n     RDKit          3D\n\n 23 23  0  0  0  0  0  0  0  0999 V2000\n    2.2619    4.4948   12.1790 W   0  0  0  0  0  7  0  0  0  0  0  0\n    1.2273    2.3979   12.2120 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.8787    3.7193   13.6457 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.3643    5.4184   11.1927 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.9920    6.6675   12.6014 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.7330    3.8480    9.5200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5071    2.7462    8.3857 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2798    2.2283    8.4034 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7951    3.8421    7.1363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3891    4.0445    6.3250 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9627    2.6857    5.3938 I   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1243    4.1941   10.7178 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9901    3.1480    7.1747 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9106    3.0947    9.5613 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2762    2.8349   10.3755 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2042    4.2266    8.3547 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4345    4.7513    8.3473 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0780    4.7929   14.0676 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4794    4.9155   15.0294 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2898    5.0741   16.2389 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0805    5.5831   16.0516 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2393    5.5335   16.8953 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5365    4.2100   16.5767 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6 12  1  0\n  7  8  1  0\n  9 10  1  0\n 11 13  1  0\n 12  1  2  0\n 13  7  4  0\n 14  6  4  0\n 15 14  1  0\n 16  6  4  0\n 17 16  1  0\n 18  1  1  0\n 19 18  3  0\n 20 19  1  0\n 20 21  1  6\n 22 20  1  0\n 23 20  1  0\n  7 14  4  0\n  9 13  4  0\n  9 16  4  0\nM  END\n","sdf");
+	viewergrid_17346424253932352[1][0].addModel("HOBWEB\n     RDKit          3D\n\n 23 23  0  0  0  0  0  0  0  0999 V2000\n    2.2619    4.4948   12.1790 W   0  0  0  0  0  7  0  0  0  0  0  0\n    1.2273    2.3979   12.2120 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.8787    3.7193   13.6457 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.3643    5.4184   11.1927 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.9920    6.6675   12.6014 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.7330    3.8480    9.5200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5071    2.7462    8.3857 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2798    2.2283    8.4034 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7951    3.8421    7.1363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3891    4.0445    6.3250 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9627    2.6857    5.3938 I   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1243    4.1941   10.7178 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9901    3.1480    7.1747 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9106    3.0947    9.5613 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2762    2.8349   10.3755 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2042    4.2266    8.3547 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4345    4.7513    8.3473 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0780    4.7929   14.0676 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4794    4.9155   15.0294 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2898    5.0741   16.2389 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0805    5.5831   16.0516 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2393    5.5335   16.8953 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5365    4.2100   16.5767 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6 12  1  0\n  7  8  1  0\n  9 10  1  0\n 11 13  1  0\n 12  1  2  0\n 13  7  4  0\n 14  6  4  0\n 15 14  1  0\n 16  6  4  0\n 17 16  1  0\n 18  1  1  0\n 19 18  3  0\n 20 19  1  0\n 20 21  1  6\n 22 20  1  0\n 23 20  1  0\n  7 14  4  0\n  9 13  4  0\n  9 16  4  0\nM  END\n","sdf");
+	viewergrid_17346424253932352[1][1].addModel("HOBWEB\n     RDKit          3D\n\n 23 23  0  0  0  0  0  0  0  0999 V2000\n    2.2619    4.4948   12.1790 W   0  0  0  0  0  7  0  0  0  0  0  0\n    1.2273    2.3979   12.2120 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.8787    3.7193   13.6457 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.3643    5.4184   11.1927 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.9920    6.6675   12.6014 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.7330    3.8480    9.5200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5071    2.7462    8.3857 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2798    2.2283    8.4034 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7951    3.8421    7.1363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3891    4.0445    6.3250 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9627    2.6857    5.3938 I   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1243    4.1941   10.7178 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9901    3.1480    7.1747 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9106    3.0947    9.5613 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2762    2.8349   10.3755 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2042    4.2266    8.3547 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4345    4.7513    8.3473 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0780    4.7929   14.0676 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4794    4.9155   15.0294 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2898    5.0741   16.2389 C   0  0  2  0  0  0  0  0  0  0  0  0\n   -1.0805    5.5831   16.0516 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2393    5.5335   16.8953 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5365    4.2100   16.5767 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6 12  1  0\n  7  8  1  0\n  9 10  1  0\n 11 13  1  0\n 12  1  2  0\n 13  7  4  0\n 14  6  4  0\n 15 14  1  0\n 16  6  4  0\n 17 16  1  0\n 18  1  1  0\n 19 18  3  0\n 20 19  1  0\n 20 21  1  6\n 22 20  1  0\n 23 20  1  0\n  7 14  4  0\n  9 13  4  0\n  9 16  4  0\nM  END\n","sdf");
+	viewergrid_17346424253932352[0][1].removeAllModels();
+	viewergrid_17346424253932352[0][1].addModel("HOBWEB\n     RDKit          3D\n\n 16 16  0  0  0  0  0  0  0  0999 V2000\n    2.2619    4.4948   12.1790 W   0  0  0  0  0  7  0  0  0  0  0  0\n    1.2273    2.3979   12.2120 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.8787    3.7193   13.6457 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    0.3643    5.4184   11.1927 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.9920    6.6675   12.6014 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    3.7330    3.8480    9.5200 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5071    2.7462    8.3857 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7951    3.8421    7.1363 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9627    2.6857    5.3938 I   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1243    4.1941   10.7178 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9901    3.1480    7.1747 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9106    3.0947    9.5613 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2042    4.2266    8.3547 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0780    4.7929   14.0676 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4794    4.9155   15.0294 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2898    5.0741   16.2389 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  1  0\n  5  1  1  0\n  6 10  1  0\n  9 11  1  0\n 10  1  2  0\n 11  7  4  0\n 12  6  4  0\n 13  6  4  0\n 14  1  1  0\n 15 14  3  0\n 16 15  1  1\n  7 12  4  0\n  8 11  4  0\n  8 13  4  0\nM  END\n","sdf_noHs");
+	viewergrid_17346424253932352[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424253932352[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424253932352[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424253932352[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424253932352[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424253932352[0][1].setStyle({"stick": {}});
+	viewergrid_17346424253932352[1][0].setStyle({"stick": {}});
+	viewergrid_17346424253932352[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424253932352[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424253932352[0][0].setBackgroundColor("black");
+	viewergrid_17346424253932352[0][1].setBackgroundColor("black");
+	viewergrid_17346424253932352[1][0].setBackgroundColor("black");
+	viewergrid_17346424253932352[1][1].setBackgroundColor("black");
+	viewergrid_17346424253932352[0][0].addLabel("W",{"position": {"x": 2.2619, "y": 4.4948, "z": 12.179}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424253932352[1][0].addLabel("W",{"position": {"x": 2.2619, "y": 4.4948, "z": 12.179}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424253932352[0][1].addLabel("W",{"position": {"x": 2.2619, "y": 4.4948, "z": 12.179}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424253932352[1][1].addLabel("W",{"position": {"x": 2.2619, "y": 4.4948, "z": 12.179}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424253932352[0][0].zoomTo();
+	viewergrid_17346424253932352[0][1].zoomTo();
+	viewergrid_17346424253932352[1][0].zoomTo();
+	viewergrid_17346424253932352[1][1].zoomTo();
+viewergrid_17346424253932352[1][1].render();
+viewergrid_17346424253932352[1][0].render();
+viewergrid_17346424253932352[0][1].render();
+viewergrid_17346424253932352[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: HOBWEB</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C8H7Cl4IN2W</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

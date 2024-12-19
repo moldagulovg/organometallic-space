@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_1734642413748686"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_1734642413748686" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1734642413748686 = null;
+var warn = document.getElementById("3dmolwarning_1734642413748686");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1734642413748686 = null;
+viewergrid_1734642413748686 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1734642413748686"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1734642413748686 = viewergrid_1734642413748686[0][0];
+viewergrid_1734642413748686[0][0].zoomTo();viewergrid_1734642413748686[0][1].zoomTo();viewergrid_1734642413748686[1][0].zoomTo();viewergrid_1734642413748686[1][1].zoomTo();	viewergrid_1734642413748686[0][0].addModel("JOMXAK\n     RDKit          3D\n\n 27 31  0  0  0  0  0  0  0  0999 V2000\n    4.6931    3.3976    1.4976 Nb  0  0  0  0  0  9  0  0  0  0  0  0\n    6.0148    3.0329    3.4117 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5064    2.7170    2.0599 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5339    5.1342    1.4532 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4255    6.5558    1.2311 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9517    6.8930   -0.1418 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.2779    7.2468    2.2755 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.9964    6.9409    1.3811 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.4665    3.3192   -0.7148 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.4505    2.7919    0.0236 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0997    1.6513    0.4525 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9236    1.3522    0.0969 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4110    2.3473   -0.6356 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.8771    7.8385   -0.2895 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4397    6.4236   -0.8046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8730    6.6302   -0.2032 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2237    8.1972    2.1515 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1898    6.9641    2.1857 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9573    7.0203    3.1510 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9014    7.8865    1.2358 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6954    6.7228    2.2661 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4677    6.4649    0.7372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4653    4.1573   -1.1850 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2953    3.2134    0.2020 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6573    1.0794    0.9853 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4642    0.5389    0.3143 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5358    2.4051   -1.0267 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  2  0\n  5  4  1  1\n  6  5  1  0\n  7  5  1  0\n  8  5  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n  6 14  1  6\n 15  6  1  0\n 16  6  1  0\n  7 17  1  6\n 18  7  1  0\n 19  7  1  0\n  8 20  1  6\n 21  8  1  0\n 22  8  1  0\n  9 23  1  6\n 10 24  1  1\n 11 25  1  1\n 12 26  1  1\n 13 27  1  6\n  9 10  4  0\n  9 13  4  0\n 10 11  4  0\n 11 12  4  0\n 12 13  4  0\nM  END\n","sdf");
+	viewergrid_1734642413748686[0][1].addModel("JOMXAK\n     RDKit          3D\n\n 27 31  0  0  0  0  0  0  0  0999 V2000\n    4.6931    3.3976    1.4976 Nb  0  0  0  0  0  9  0  0  0  0  0  0\n    6.0148    3.0329    3.4117 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5064    2.7170    2.0599 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5339    5.1342    1.4532 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4255    6.5558    1.2311 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9517    6.8930   -0.1418 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.2779    7.2468    2.2755 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.9964    6.9409    1.3811 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.4665    3.3192   -0.7148 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.4505    2.7919    0.0236 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0997    1.6513    0.4525 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9236    1.3522    0.0969 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4110    2.3473   -0.6356 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.8771    7.8385   -0.2895 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4397    6.4236   -0.8046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8730    6.6302   -0.2032 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2237    8.1972    2.1515 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1898    6.9641    2.1857 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9573    7.0203    3.1510 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9014    7.8865    1.2358 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6954    6.7228    2.2661 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4677    6.4649    0.7372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4653    4.1573   -1.1850 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2953    3.2134    0.2020 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6573    1.0794    0.9853 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4642    0.5389    0.3143 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5358    2.4051   -1.0267 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  2  0\n  5  4  1  1\n  6  5  1  0\n  7  5  1  0\n  8  5  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n  6 14  1  6\n 15  6  1  0\n 16  6  1  0\n  7 17  1  6\n 18  7  1  0\n 19  7  1  0\n  8 20  1  6\n 21  8  1  0\n 22  8  1  0\n  9 23  1  6\n 10 24  1  1\n 11 25  1  1\n 12 26  1  1\n 13 27  1  6\n  9 10  4  0\n  9 13  4  0\n 10 11  4  0\n 11 12  4  0\n 12 13  4  0\nM  END\n","sdf");
+	viewergrid_1734642413748686[1][0].addModel("JOMXAK\n     RDKit          3D\n\n 27 31  0  0  0  0  0  0  0  0999 V2000\n    4.6931    3.3976    1.4976 Nb  0  0  0  0  0  9  0  0  0  0  0  0\n    6.0148    3.0329    3.4117 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5064    2.7170    2.0599 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5339    5.1342    1.4532 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4255    6.5558    1.2311 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9517    6.8930   -0.1418 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.2779    7.2468    2.2755 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.9964    6.9409    1.3811 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.4665    3.3192   -0.7148 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.4505    2.7919    0.0236 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0997    1.6513    0.4525 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9236    1.3522    0.0969 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4110    2.3473   -0.6356 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.8771    7.8385   -0.2895 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4397    6.4236   -0.8046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8730    6.6302   -0.2032 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2237    8.1972    2.1515 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1898    6.9641    2.1857 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9573    7.0203    3.1510 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9014    7.8865    1.2358 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6954    6.7228    2.2661 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4677    6.4649    0.7372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4653    4.1573   -1.1850 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2953    3.2134    0.2020 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6573    1.0794    0.9853 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4642    0.5389    0.3143 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5358    2.4051   -1.0267 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  2  0\n  5  4  1  1\n  6  5  1  0\n  7  5  1  0\n  8  5  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n  6 14  1  6\n 15  6  1  0\n 16  6  1  0\n  7 17  1  6\n 18  7  1  0\n 19  7  1  0\n  8 20  1  6\n 21  8  1  0\n 22  8  1  0\n  9 23  1  6\n 10 24  1  1\n 11 25  1  1\n 12 26  1  1\n 13 27  1  6\n  9 10  4  0\n  9 13  4  0\n 10 11  4  0\n 11 12  4  0\n 12 13  4  0\nM  END\n","sdf");
+	viewergrid_1734642413748686[1][1].addModel("JOMXAK\n     RDKit          3D\n\n 27 31  0  0  0  0  0  0  0  0999 V2000\n    4.6931    3.3976    1.4976 Nb  0  0  0  0  0  9  0  0  0  0  0  0\n    6.0148    3.0329    3.4117 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5064    2.7170    2.0599 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5339    5.1342    1.4532 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4255    6.5558    1.2311 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9517    6.8930   -0.1418 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.2779    7.2468    2.2755 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.9964    6.9409    1.3811 C   0  0  2  0  0  0  0  0  0  0  0  0\n    5.4665    3.3192   -0.7148 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.4505    2.7919    0.0236 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0997    1.6513    0.4525 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9236    1.3522    0.0969 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4110    2.3473   -0.6356 C   0  0  1  0  0  0  0  0  0  0  0  0\n    4.8771    7.8385   -0.2895 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4397    6.4236   -0.8046 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.8730    6.6302   -0.2032 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2237    8.1972    2.1515 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.1898    6.9641    2.1857 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9573    7.0203    3.1510 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9014    7.8865    1.2358 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6954    6.7228    2.2661 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4677    6.4649    0.7372 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4653    4.1573   -1.1850 H   0  0  0  0  0  0  0  0  0  0  0  0\n    7.2953    3.2134    0.2020 H   0  0  0  0  0  0  0  0  0  0  0  0\n    6.6573    1.0794    0.9853 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4642    0.5389    0.3143 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5358    2.4051   -1.0267 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  2  0\n  5  4  1  1\n  6  5  1  0\n  7  5  1  0\n  8  5  1  0\n  9  1  1  0\n 10  1  1  0\n 11  1  1  0\n 12  1  1  0\n 13  1  1  0\n  6 14  1  6\n 15  6  1  0\n 16  6  1  0\n  7 17  1  6\n 18  7  1  0\n 19  7  1  0\n  8 20  1  6\n 21  8  1  0\n 22  8  1  0\n  9 23  1  6\n 10 24  1  1\n 11 25  1  1\n 12 26  1  1\n 13 27  1  6\n  9 10  4  0\n  9 13  4  0\n 10 11  4  0\n 11 12  4  0\n 12 13  4  0\nM  END\n","sdf");
+	viewergrid_1734642413748686[0][1].removeAllModels();
+	viewergrid_1734642413748686[0][1].addModel("JOMXAK\n     RDKit          3D\n\n 13 17  0  0  0  0  0  0  0  0999 V2000\n    4.6931    3.3976    1.4976 Nb  0  0  0  0  0  9  0  0  0  0  0  0\n    6.0148    3.0329    3.4117 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5064    2.7170    2.0599 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5339    5.1342    1.4532 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4255    6.5558    1.2311 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9517    6.8930   -0.1418 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.2779    7.2468    2.2755 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9964    6.9409    1.3811 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4665    3.3192   -0.7148 C   0  0  1  0  0  0  0  0  0  0  0  0\n    6.4505    2.7919    0.0236 C   0  0  2  0  0  0  0  0  0  0  0  0\n    6.0997    1.6513    0.4525 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.9236    1.3522    0.0969 C   0  0  2  0  0  0  0  0  0  0  0  0\n    4.4110    2.3473   -0.6356 C   0  0  1  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  3  1  1  0\n  4  1  2  0\n  5  4  1  1\n  6  5  1  1\n  7  5  1  1\n  8  5  1  1\n  9  1  1  1\n 10  1  1  1\n 11  1  1  1\n 12  1  1  1\n 13  1  1  1\n  9 10  4  0\n  9 13  4  0\n 10 11  4  0\n 11 12  4  0\n 12 13  4  0\nM  END\n","sdf_noHs");
+	viewergrid_1734642413748686[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413748686[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413748686[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413748686[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1734642413748686[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_1734642413748686[0][1].setStyle({"stick": {}});
+	viewergrid_1734642413748686[1][0].setStyle({"stick": {}});
+	viewergrid_1734642413748686[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1734642413748686[1][1].setStyle({"sphere": {}});
+	viewergrid_1734642413748686[0][0].setBackgroundColor("black");
+	viewergrid_1734642413748686[0][1].setBackgroundColor("black");
+	viewergrid_1734642413748686[1][0].setBackgroundColor("black");
+	viewergrid_1734642413748686[1][1].setBackgroundColor("black");
+	viewergrid_1734642413748686[0][0].addLabel("Nb",{"position": {"x": 4.6931, "y": 3.3976, "z": 1.4976}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413748686[1][0].addLabel("Nb",{"position": {"x": 4.6931, "y": 3.3976, "z": 1.4976}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413748686[0][1].addLabel("Nb",{"position": {"x": 4.6931, "y": 3.3976, "z": 1.4976}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413748686[1][1].addLabel("Nb",{"position": {"x": 4.6931, "y": 3.3976, "z": 1.4976}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1734642413748686[0][0].zoomTo();
+	viewergrid_1734642413748686[0][1].zoomTo();
+	viewergrid_1734642413748686[1][0].zoomTo();
+	viewergrid_1734642413748686[1][1].zoomTo();
+viewergrid_1734642413748686[1][1].render();
+viewergrid_1734642413748686[1][0].render();
+viewergrid_1734642413748686[0][1].render();
+viewergrid_1734642413748686[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: JOMXAK</li>
+<li><strong>Coord Num</strong>: 8</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C9H14Cl2NNb</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

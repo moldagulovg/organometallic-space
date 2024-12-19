@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424172239892"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424172239892" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424172239892 = null;
+var warn = document.getElementById("3dmolwarning_17346424172239892");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424172239892 = null;
+viewergrid_17346424172239892 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424172239892"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424172239892 = viewergrid_17346424172239892[0][0];
+viewergrid_17346424172239892[0][0].zoomTo();viewergrid_17346424172239892[0][1].zoomTo();viewergrid_17346424172239892[1][0].zoomTo();viewergrid_17346424172239892[1][1].zoomTo();	viewergrid_17346424172239892[0][0].addModel("DITSOP\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n    2.2597    7.7963    3.0465 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    3.9245    9.4503    3.1710 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    0.1778    8.0986    2.0019 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0120    7.0487    4.9526 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4212    5.8615    5.1522 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1501    5.3769    4.3814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1804    5.3034    6.3360 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5458    6.0085    7.4119 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3764    5.6485    8.2744 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1593    7.2369    7.3115 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4272    7.7202    8.0848 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3684    7.7364    6.0473 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7757    8.5885    5.9468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1599    6.2116    2.0438 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4490    5.1427    1.6772 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5190    5.1589    1.8705 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9159    4.0638    1.0721 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2131    4.0626    0.7934 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5896    3.2964    0.3766 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0360    5.1339    1.0872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9580    5.1265    0.8574 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4621    6.2141    1.7287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9967    6.9690    1.9484 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  3  1  1  0\n  4  1  1  0\n  5  4  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12  4  4  0\n 13 12  1  0\n 14  1  1  0\n 15 14  4  0\n 16 15  1  0\n 17 15  4  0\n 18 17  4  0\n 19 18  1  0\n 20 18  4  0\n 21 20  1  0\n 22 14  4  0\n 23 22  1  0\n 10 12  4  0\n 20 22  4  0\nM  END\n","sdf");
+	viewergrid_17346424172239892[0][1].addModel("DITSOP\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n    2.2597    7.7963    3.0465 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    3.9245    9.4503    3.1710 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    0.1778    8.0986    2.0019 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0120    7.0487    4.9526 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4212    5.8615    5.1522 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1501    5.3769    4.3814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1804    5.3034    6.3360 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5458    6.0085    7.4119 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3764    5.6485    8.2744 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1593    7.2369    7.3115 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4272    7.7202    8.0848 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3684    7.7364    6.0473 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7757    8.5885    5.9468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1599    6.2116    2.0438 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4490    5.1427    1.6772 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5190    5.1589    1.8705 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9159    4.0638    1.0721 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2131    4.0626    0.7934 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5896    3.2964    0.3766 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0360    5.1339    1.0872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9580    5.1265    0.8574 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4621    6.2141    1.7287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9967    6.9690    1.9484 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  3  1  1  0\n  4  1  1  0\n  5  4  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12  4  4  0\n 13 12  1  0\n 14  1  1  0\n 15 14  4  0\n 16 15  1  0\n 17 15  4  0\n 18 17  4  0\n 19 18  1  0\n 20 18  4  0\n 21 20  1  0\n 22 14  4  0\n 23 22  1  0\n 10 12  4  0\n 20 22  4  0\nM  END\n","sdf");
+	viewergrid_17346424172239892[1][0].addModel("DITSOP\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n    2.2597    7.7963    3.0465 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    3.9245    9.4503    3.1710 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    0.1778    8.0986    2.0019 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0120    7.0487    4.9526 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4212    5.8615    5.1522 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1501    5.3769    4.3814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1804    5.3034    6.3360 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5458    6.0085    7.4119 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3764    5.6485    8.2744 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1593    7.2369    7.3115 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4272    7.7202    8.0848 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3684    7.7364    6.0473 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7757    8.5885    5.9468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1599    6.2116    2.0438 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4490    5.1427    1.6772 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5190    5.1589    1.8705 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9159    4.0638    1.0721 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2131    4.0626    0.7934 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5896    3.2964    0.3766 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0360    5.1339    1.0872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9580    5.1265    0.8574 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4621    6.2141    1.7287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9967    6.9690    1.9484 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  3  1  1  0\n  4  1  1  0\n  5  4  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12  4  4  0\n 13 12  1  0\n 14  1  1  0\n 15 14  4  0\n 16 15  1  0\n 17 15  4  0\n 18 17  4  0\n 19 18  1  0\n 20 18  4  0\n 21 20  1  0\n 22 14  4  0\n 23 22  1  0\n 10 12  4  0\n 20 22  4  0\nM  END\n","sdf");
+	viewergrid_17346424172239892[1][1].addModel("DITSOP\n     RDKit          3D\n\n 23 24  0  0  0  0  0  0  0  0999 V2000\n    2.2597    7.7963    3.0465 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    3.9245    9.4503    3.1710 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    0.1778    8.0986    2.0019 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0120    7.0487    4.9526 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4212    5.8615    5.1522 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1501    5.3769    4.3814 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1804    5.3034    6.3360 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5458    6.0085    7.4119 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3764    5.6485    8.2744 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1593    7.2369    7.3115 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4272    7.7202    8.0848 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3684    7.7364    6.0473 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7757    8.5885    5.9468 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1599    6.2116    2.0438 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4490    5.1427    1.6772 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5190    5.1589    1.8705 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9159    4.0638    1.0721 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2131    4.0626    0.7934 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5896    3.2964    0.3766 H   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0360    5.1339    1.0872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.9580    5.1265    0.8574 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4621    6.2141    1.7287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.9967    6.9690    1.9484 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  3  1  1  0\n  4  1  1  0\n  5  4  4  0\n  6  5  1  0\n  7  5  4  0\n  8  7  4  0\n  9  8  1  0\n 10  8  4  0\n 11 10  1  0\n 12  4  4  0\n 13 12  1  0\n 14  1  1  0\n 15 14  4  0\n 16 15  1  0\n 17 15  4  0\n 18 17  4  0\n 19 18  1  0\n 20 18  4  0\n 21 20  1  0\n 22 14  4  0\n 23 22  1  0\n 10 12  4  0\n 20 22  4  0\nM  END\n","sdf");
+	viewergrid_17346424172239892[0][1].removeAllModels();
+	viewergrid_17346424172239892[0][1].addModel("DITSOP\n     RDKit          3D\n\n 15 16  0  0  0  0  0  0  0  0999 V2000\n    2.2597    7.7963    3.0465 Zn  0  0  2  0  0  4  0  0  0  0  0  0\n    3.9245    9.4503    3.1710 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    0.1778    8.0986    2.0019 Br  0  0  0  0  0  0  0  0  0  0  0  0\n    2.0120    7.0487    4.9526 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4212    5.8615    5.1522 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1804    5.3034    6.3360 N   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5458    6.0085    7.4119 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1593    7.2369    7.3115 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3684    7.7364    6.0473 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1599    6.2116    2.0438 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4490    5.1427    1.6772 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9159    4.0638    1.0721 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2131    4.0626    0.7934 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.0360    5.1339    1.0872 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4621    6.2141    1.7287 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  1\n  3  1  1  0\n  4  1  1  0\n  5  4  4  0\n  6  5  4  0\n  7  6  4  0\n  8  7  4  0\n  9  4  4  0\n 10  1  1  0\n 11 10  4  0\n 12 11  4  0\n 13 12  4  0\n 14 13  4  0\n 15 10  4  0\n  8  9  4  0\n 14 15  4  0\nM  END\n","sdf_noHs");
+	viewergrid_17346424172239892[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424172239892[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424172239892[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424172239892[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424172239892[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424172239892[0][1].setStyle({"stick": {}});
+	viewergrid_17346424172239892[1][0].setStyle({"stick": {}});
+	viewergrid_17346424172239892[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424172239892[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424172239892[0][0].setBackgroundColor("black");
+	viewergrid_17346424172239892[0][1].setBackgroundColor("black");
+	viewergrid_17346424172239892[1][0].setBackgroundColor("black");
+	viewergrid_17346424172239892[1][1].setBackgroundColor("black");
+	viewergrid_17346424172239892[0][0].addLabel("Zn",{"position": {"x": 2.2597, "y": 7.7963, "z": 3.0465}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424172239892[1][0].addLabel("Zn",{"position": {"x": 2.2597, "y": 7.7963, "z": 3.0465}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424172239892[0][1].addLabel("Zn",{"position": {"x": 2.2597, "y": 7.7963, "z": 3.0465}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424172239892[1][1].addLabel("Zn",{"position": {"x": 2.2597, "y": 7.7963, "z": 3.0465}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424172239892[0][0].zoomTo();
+	viewergrid_17346424172239892[0][1].zoomTo();
+	viewergrid_17346424172239892[1][0].zoomTo();
+	viewergrid_17346424172239892[1][1].zoomTo();
+viewergrid_17346424172239892[1][1].render();
+viewergrid_17346424172239892[1][0].render();
+viewergrid_17346424172239892[0][1].render();
+viewergrid_17346424172239892[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: DITSOP</li>
+<li><strong>Coord Num</strong>: 4</li>
+<li><strong>Charge</strong>: 0</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C8H8Br2N4Zn</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

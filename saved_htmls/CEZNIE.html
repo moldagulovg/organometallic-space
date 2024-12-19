@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424248436618"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424248436618" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424248436618 = null;
+var warn = document.getElementById("3dmolwarning_17346424248436618");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424248436618 = null;
+viewergrid_17346424248436618 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424248436618"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424248436618 = viewergrid_17346424248436618[0][0];
+viewergrid_17346424248436618[0][0].zoomTo();viewergrid_17346424248436618[0][1].zoomTo();viewergrid_17346424248436618[1][0].zoomTo();viewergrid_17346424248436618[1][1].zoomTo();	viewergrid_17346424248436618[0][0].addModel("CEZNIE\n     RDKit          3D\n\n 25 29  0  0  0  0  0  0  0  0999 V2000\n    4.1736    0.5934    1.5088 Cu  0  0  0  0  0  5  0  0  0  0  0  0\n    6.0520   -0.0611    1.9457 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9258    0.5020    2.8041 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1445   -0.0776    3.0889 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4661   -1.2780    2.5062 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5782   -1.8755    1.6140 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3814   -1.2348    1.3521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3141   -0.9083    0.2895 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3683   -1.7297    0.3977 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4401   -2.8727   -0.3847 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4126   -3.1386   -1.2707 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3354   -2.2733   -1.3744 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3261   -1.1431   -0.5751 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5254    0.9149    0.3256 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3242   -0.0574   -0.5912 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2757    0.0120   -1.5003 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4282    1.1002   -1.4527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6277    2.0771   -0.5183 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6944    1.9628    0.3678 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1128   -0.5118    3.1427 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8751   -1.1990    2.9408 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5256   -0.0177    3.4398 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8852    3.0934    1.1072 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4910    3.1869    2.2336 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0564    2.1167    2.7503 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  4  0\n  3  4  4  0\n  4  5  4  0\n  5  6  4  0\n  6  7  4  0\n  7  2  4  0\n  8  1  1  0\n  9  7  1  0\n 10  9  4  0\n 11 10  4  0\n 12 11  4  0\n 13  8  4  0\n 14  1  1  0\n 15 13  1  0\n 16 15  4  0\n 17 16  4  0\n 18 17  4  0\n 19 14  4  0\n 20  1  1  0\n 21 20  1  0\n 22 20  1  0\n 23 24  2  0\n 24 25  1  0\n 25  1  1  0\n  8  9  4  0\n 12 13  4  0\n 14 15  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424248436618[0][1].addModel("CEZNIE\n     RDKit          3D\n\n 25 29  0  0  0  0  0  0  0  0999 V2000\n    4.1736    0.5934    1.5088 Cu  0  0  0  0  0  5  0  0  0  0  0  0\n    6.0520   -0.0611    1.9457 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9258    0.5020    2.8041 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1445   -0.0776    3.0889 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4661   -1.2780    2.5062 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5782   -1.8755    1.6140 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3814   -1.2348    1.3521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3141   -0.9083    0.2895 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3683   -1.7297    0.3977 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4401   -2.8727   -0.3847 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4126   -3.1386   -1.2707 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3354   -2.2733   -1.3744 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3261   -1.1431   -0.5751 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5254    0.9149    0.3256 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3242   -0.0574   -0.5912 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2757    0.0120   -1.5003 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4282    1.1002   -1.4527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6277    2.0771   -0.5183 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6944    1.9628    0.3678 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1128   -0.5118    3.1427 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8751   -1.1990    2.9408 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5256   -0.0177    3.4398 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8852    3.0934    1.1072 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4910    3.1869    2.2336 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0564    2.1167    2.7503 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  4  0\n  3  4  4  0\n  4  5  4  0\n  5  6  4  0\n  6  7  4  0\n  7  2  4  0\n  8  1  1  0\n  9  7  1  0\n 10  9  4  0\n 11 10  4  0\n 12 11  4  0\n 13  8  4  0\n 14  1  1  0\n 15 13  1  0\n 16 15  4  0\n 17 16  4  0\n 18 17  4  0\n 19 14  4  0\n 20  1  1  0\n 21 20  1  0\n 22 20  1  0\n 23 24  2  0\n 24 25  1  0\n 25  1  1  0\n  8  9  4  0\n 12 13  4  0\n 14 15  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424248436618[1][0].addModel("CEZNIE\n     RDKit          3D\n\n 25 29  0  0  0  0  0  0  0  0999 V2000\n    4.1736    0.5934    1.5088 Cu  0  0  0  0  0  5  0  0  0  0  0  0\n    6.0520   -0.0611    1.9457 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9258    0.5020    2.8041 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1445   -0.0776    3.0889 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4661   -1.2780    2.5062 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5782   -1.8755    1.6140 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3814   -1.2348    1.3521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3141   -0.9083    0.2895 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3683   -1.7297    0.3977 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4401   -2.8727   -0.3847 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4126   -3.1386   -1.2707 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3354   -2.2733   -1.3744 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3261   -1.1431   -0.5751 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5254    0.9149    0.3256 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3242   -0.0574   -0.5912 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2757    0.0120   -1.5003 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4282    1.1002   -1.4527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6277    2.0771   -0.5183 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6944    1.9628    0.3678 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1128   -0.5118    3.1427 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8751   -1.1990    2.9408 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5256   -0.0177    3.4398 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8852    3.0934    1.1072 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4910    3.1869    2.2336 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0564    2.1167    2.7503 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  4  0\n  3  4  4  0\n  4  5  4  0\n  5  6  4  0\n  6  7  4  0\n  7  2  4  0\n  8  1  1  0\n  9  7  1  0\n 10  9  4  0\n 11 10  4  0\n 12 11  4  0\n 13  8  4  0\n 14  1  1  0\n 15 13  1  0\n 16 15  4  0\n 17 16  4  0\n 18 17  4  0\n 19 14  4  0\n 20  1  1  0\n 21 20  1  0\n 22 20  1  0\n 23 24  2  0\n 24 25  1  0\n 25  1  1  0\n  8  9  4  0\n 12 13  4  0\n 14 15  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424248436618[1][1].addModel("CEZNIE\n     RDKit          3D\n\n 25 29  0  0  0  0  0  0  0  0999 V2000\n    4.1736    0.5934    1.5088 Cu  0  0  0  0  0  5  0  0  0  0  0  0\n    6.0520   -0.0611    1.9457 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9258    0.5020    2.8041 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1445   -0.0776    3.0889 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4661   -1.2780    2.5062 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5782   -1.8755    1.6140 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3814   -1.2348    1.3521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3141   -0.9083    0.2895 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3683   -1.7297    0.3977 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4401   -2.8727   -0.3847 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4126   -3.1386   -1.2707 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3354   -2.2733   -1.3744 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3261   -1.1431   -0.5751 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5254    0.9149    0.3256 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3242   -0.0574   -0.5912 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2757    0.0120   -1.5003 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4282    1.1002   -1.4527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6277    2.0771   -0.5183 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6944    1.9628    0.3678 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1128   -0.5118    3.1427 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8751   -1.1990    2.9408 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5256   -0.0177    3.4398 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8852    3.0934    1.1072 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4910    3.1869    2.2336 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0564    2.1167    2.7503 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  4  0\n  3  4  4  0\n  4  5  4  0\n  5  6  4  0\n  6  7  4  0\n  7  2  4  0\n  8  1  1  0\n  9  7  1  0\n 10  9  4  0\n 11 10  4  0\n 12 11  4  0\n 13  8  4  0\n 14  1  1  0\n 15 13  1  0\n 16 15  4  0\n 17 16  4  0\n 18 17  4  0\n 19 14  4  0\n 20  1  1  0\n 21 20  1  0\n 22 20  1  0\n 23 24  2  0\n 24 25  1  0\n 25  1  1  0\n  8  9  4  0\n 12 13  4  0\n 14 15  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf");
+	viewergrid_17346424248436618[0][1].removeAllModels();
+	viewergrid_17346424248436618[0][1].addModel("CEZNIE\n     RDKit          3D\n\n 23 27  0  0  0  0  0  0  0  0999 V2000\n    4.1736    0.5934    1.5088 Cu  0  0  0  0  0  5  0  0  0  0  0  0\n    6.0520   -0.0611    1.9457 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9258    0.5020    2.8041 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1445   -0.0776    3.0889 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4661   -1.2780    2.5062 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.5782   -1.8755    1.6140 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3814   -1.2348    1.3521 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.3141   -0.9083    0.2895 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3683   -1.7297    0.3977 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4401   -2.8727   -0.3847 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4126   -3.1386   -1.2707 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3354   -2.2733   -1.3744 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3261   -1.1431   -0.5751 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5254    0.9149    0.3256 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.3242   -0.0574   -0.5912 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2757    0.0120   -1.5003 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4282    1.1002   -1.4527 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6277    2.0771   -0.5183 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6944    1.9628    0.3678 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.1128   -0.5118    3.1427 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.8852    3.0934    1.1072 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4910    3.1869    2.2336 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0564    2.1167    2.7503 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  4  0\n  3  4  4  0\n  4  5  4  0\n  5  6  4  0\n  6  7  4  0\n  7  2  4  0\n  8  1  1  0\n  9  7  1  0\n 10  9  4  0\n 11 10  4  0\n 12 11  4  0\n 13  8  4  0\n 14  1  1  0\n 15 13  1  0\n 16 15  4  0\n 17 16  4  0\n 18 17  4  0\n 19 14  4  0\n 20  1  1  0\n 21 22  2  0\n 22 23  1  0\n 23  1  1  0\n  8  9  4  0\n 12 13  4  0\n 14 15  4  0\n 18 19  4  0\nM  CHG  1   1   1\nM  END\n","sdf_noHs");
+	viewergrid_17346424248436618[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424248436618[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424248436618[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424248436618[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424248436618[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424248436618[0][1].setStyle({"stick": {}});
+	viewergrid_17346424248436618[1][0].setStyle({"stick": {}});
+	viewergrid_17346424248436618[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424248436618[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424248436618[0][0].setBackgroundColor("black");
+	viewergrid_17346424248436618[0][1].setBackgroundColor("black");
+	viewergrid_17346424248436618[1][0].setBackgroundColor("black");
+	viewergrid_17346424248436618[1][1].setBackgroundColor("black");
+	viewergrid_17346424248436618[0][0].addLabel("Cu",{"position": {"x": 4.1736, "y": 0.5934, "z": 1.5088}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424248436618[1][0].addLabel("Cu",{"position": {"x": 4.1736, "y": 0.5934, "z": 1.5088}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424248436618[0][1].addLabel("Cu",{"position": {"x": 4.1736, "y": 0.5934, "z": 1.5088}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424248436618[1][1].addLabel("Cu",{"position": {"x": 4.1736, "y": 0.5934, "z": 1.5088}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424248436618[0][0].zoomTo();
+	viewergrid_17346424248436618[0][1].zoomTo();
+	viewergrid_17346424248436618[1][0].zoomTo();
+	viewergrid_17346424248436618[1][1].zoomTo();
+viewergrid_17346424248436618[1][1].render();
+viewergrid_17346424248436618[1][0].render();
+viewergrid_17346424248436618[0][1].render();
+viewergrid_17346424248436618[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: CEZNIE</li>
+<li><strong>Coord Num</strong>: 5</li>
+<li><strong>Charge</strong>: 1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C15H2CuN4O3(1+)</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,103 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {
+                    background-color: black;
+                    color: white; /* Optional for readability */
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 80%; margin: 20px;">
+                <div id="3dmolviewer_17346424223788695"  style="position: relative; width: 1000px; height: 1000px;">
+        <p id="3dmolwarning_17346424223788695" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17346424223788695 = null;
+var warn = document.getElementById("3dmolwarning_17346424223788695");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17346424223788695 = null;
+viewergrid_17346424223788695 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17346424223788695"),{rows: 2, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17346424223788695 = viewergrid_17346424223788695[0][0];
+viewergrid_17346424223788695[0][0].zoomTo();viewergrid_17346424223788695[0][1].zoomTo();viewergrid_17346424223788695[1][0].zoomTo();viewergrid_17346424223788695[1][1].zoomTo();	viewergrid_17346424223788695[0][0].addModel("REJQOM\n     RDKit          3D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    0.8097    4.3686    0.0000 Ir  0  0  0  0  0  6  0  0  0  0  0  0\n    2.7890    4.3394    3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    2.7603    2.8182    0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    1.0486    5.5046    2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    4.2360    4.0401    1.4780 Se  0  0  0  0  0  3  0  0  0  0  0  0\n    1.8689    5.7368   -0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4772    6.6565   -1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2764    7.6997   -1.7867 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.8766    8.5718   -1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3153    7.5944   -2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1836    7.6565   -1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1409    5.9190   -0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -2.6166    4.6971   -1.4780 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -1.1696    4.3978   -3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    0.5708    3.2326   -2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -0.2495    3.0004    0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8578    2.0807    1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6571    1.0375    1.7867 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.2572    0.1654    1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6960    1.1429    2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5642    1.0807    1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  4  1  0\n  3  5  1  0\n  4  1  1  0\n  5  2  1  0\n  6  1  1  0\n  7  6  3  0\n  8  7  1  0\n  8  9  1  6\n 10  8  1  0\n 11  8  1  0\n 12  1  1  0\n 13 12  1  0\n 14 13  1  0\n 15  1  1  0\n 16  1  1  0\n 17 16  3  0\n 18 17  1  0\n 18 19  1  1\n 20 18  1  0\n 21 18  1  0\n 14 15  1  0\nM  CHG  1   5  -1\nM  END\n","sdf");
+	viewergrid_17346424223788695[0][1].addModel("REJQOM\n     RDKit          3D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    0.8097    4.3686    0.0000 Ir  0  0  0  0  0  6  0  0  0  0  0  0\n    2.7890    4.3394    3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    2.7603    2.8182    0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    1.0486    5.5046    2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    4.2360    4.0401    1.4780 Se  0  0  0  0  0  3  0  0  0  0  0  0\n    1.8689    5.7368   -0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4772    6.6565   -1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2764    7.6997   -1.7867 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.8766    8.5718   -1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3153    7.5944   -2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1836    7.6565   -1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1409    5.9190   -0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -2.6166    4.6971   -1.4780 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -1.1696    4.3978   -3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    0.5708    3.2326   -2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -0.2495    3.0004    0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8578    2.0807    1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6571    1.0375    1.7867 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.2572    0.1654    1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6960    1.1429    2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5642    1.0807    1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  4  1  0\n  3  5  1  0\n  4  1  1  0\n  5  2  1  0\n  6  1  1  0\n  7  6  3  0\n  8  7  1  0\n  8  9  1  6\n 10  8  1  0\n 11  8  1  0\n 12  1  1  0\n 13 12  1  0\n 14 13  1  0\n 15  1  1  0\n 16  1  1  0\n 17 16  3  0\n 18 17  1  0\n 18 19  1  1\n 20 18  1  0\n 21 18  1  0\n 14 15  1  0\nM  CHG  1   5  -1\nM  END\n","sdf");
+	viewergrid_17346424223788695[1][0].addModel("REJQOM\n     RDKit          3D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    0.8097    4.3686    0.0000 Ir  0  0  0  0  0  6  0  0  0  0  0  0\n    2.7890    4.3394    3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    2.7603    2.8182    0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    1.0486    5.5046    2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    4.2360    4.0401    1.4780 Se  0  0  0  0  0  3  0  0  0  0  0  0\n    1.8689    5.7368   -0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4772    6.6565   -1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2764    7.6997   -1.7867 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.8766    8.5718   -1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3153    7.5944   -2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1836    7.6565   -1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1409    5.9190   -0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -2.6166    4.6971   -1.4780 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -1.1696    4.3978   -3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    0.5708    3.2326   -2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -0.2495    3.0004    0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8578    2.0807    1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6571    1.0375    1.7867 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.2572    0.1654    1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6960    1.1429    2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5642    1.0807    1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  4  1  0\n  3  5  1  0\n  4  1  1  0\n  5  2  1  0\n  6  1  1  0\n  7  6  3  0\n  8  7  1  0\n  8  9  1  6\n 10  8  1  0\n 11  8  1  0\n 12  1  1  0\n 13 12  1  0\n 14 13  1  0\n 15  1  1  0\n 16  1  1  0\n 17 16  3  0\n 18 17  1  0\n 18 19  1  1\n 20 18  1  0\n 21 18  1  0\n 14 15  1  0\nM  CHG  1   5  -1\nM  END\n","sdf");
+	viewergrid_17346424223788695[1][1].addModel("REJQOM\n     RDKit          3D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    0.8097    4.3686    0.0000 Ir  0  0  0  0  0  6  0  0  0  0  0  0\n    2.7890    4.3394    3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    2.7603    2.8182    0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    1.0486    5.5046    2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    4.2360    4.0401    1.4780 Se  0  0  0  0  0  3  0  0  0  0  0  0\n    1.8689    5.7368   -0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4772    6.6565   -1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2764    7.6997   -1.7867 C   0  0  2  0  0  0  0  0  0  0  0  0\n    2.8766    8.5718   -1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3153    7.5944   -2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n    4.1836    7.6565   -1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1409    5.9190   -0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -2.6166    4.6971   -1.4780 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -1.1696    4.3978   -3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    0.5708    3.2326   -2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -0.2495    3.0004    0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8578    2.0807    1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6571    1.0375    1.7867 C   0  0  1  0  0  0  0  0  0  0  0  0\n   -1.2572    0.1654    1.5668 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6960    1.1429    2.7625 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5642    1.0807    1.4156 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  4  1  0\n  3  5  1  0\n  4  1  1  0\n  5  2  1  0\n  6  1  1  0\n  7  6  3  0\n  8  7  1  0\n  8  9  1  6\n 10  8  1  0\n 11  8  1  0\n 12  1  1  0\n 13 12  1  0\n 14 13  1  0\n 15  1  1  0\n 16  1  1  0\n 17 16  3  0\n 18 17  1  0\n 18 19  1  1\n 20 18  1  0\n 21 18  1  0\n 14 15  1  0\nM  CHG  1   5  -1\nM  END\n","sdf");
+	viewergrid_17346424223788695[0][1].removeAllModels();
+	viewergrid_17346424223788695[0][1].addModel("REJQOM\n     RDKit          3D\n\n 15 16  0  0  0  0  0  0  0  0999 V2000\n    0.8097    4.3686    0.0000 Ir  0  0  0  0  0  6  0  0  0  0  0  0\n    2.7890    4.3394    3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    2.7603    2.8182    0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    1.0486    5.5046    2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    4.2360    4.0401    1.4780 Se  0  0  0  0  0  3  0  0  0  0  0  0\n    1.8689    5.7368   -0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4772    6.6565   -1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2764    7.6997   -1.7867 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1409    5.9190   -0.1515 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -2.6166    4.6971   -1.4780 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -1.1696    4.3978   -3.2783 Se  0  0  0  0  0  2  0  0  0  0  0  0\n    0.5708    3.2326   -2.2068 Se  0  0  0  0  0  2  0  0  0  0  0  0\n   -0.2495    3.0004    0.7765 N   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8578    2.0807    1.2287 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6571    1.0375    1.7867 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  3  1  0\n  2  4  1  0\n  3  5  1  0\n  4  1  1  0\n  5  2  1  0\n  6  1  1  0\n  7  6  3  0\n  8  7  1  1\n  9  1  1  0\n 10  9  1  0\n 11 10  1  0\n 12  1  1  0\n 13  1  1  0\n 14 13  3  0\n 15 14  1  6\n 11 12  1  0\nM  CHG  1   5  -1\nM  END\n","sdf_noHs");
+	viewergrid_17346424223788695[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424223788695[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424223788695[1][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424223788695[1][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17346424223788695[0][0].setStyle({"line": {"linewidth": 10}});
+	viewergrid_17346424223788695[0][1].setStyle({"stick": {}});
+	viewergrid_17346424223788695[1][0].setStyle({"stick": {}});
+	viewergrid_17346424223788695[1][0].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17346424223788695[1][1].setStyle({"sphere": {}});
+	viewergrid_17346424223788695[0][0].setBackgroundColor("black");
+	viewergrid_17346424223788695[0][1].setBackgroundColor("black");
+	viewergrid_17346424223788695[1][0].setBackgroundColor("black");
+	viewergrid_17346424223788695[1][1].setBackgroundColor("black");
+	viewergrid_17346424223788695[0][0].addLabel("Ir",{"position": {"x": 0.8097, "y": 4.3686, "z": 0.0}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424223788695[1][0].addLabel("Ir",{"position": {"x": 0.8097, "y": 4.3686, "z": 0.0}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424223788695[0][1].addLabel("Ir",{"position": {"x": 0.8097, "y": 4.3686, "z": 0.0}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424223788695[1][1].addLabel("Ir",{"position": {"x": 0.8097, "y": 4.3686, "z": 0.0}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17346424223788695[0][0].zoomTo();
+	viewergrid_17346424223788695[0][1].zoomTo();
+	viewergrid_17346424223788695[1][0].zoomTo();
+	viewergrid_17346424223788695[1][1].zoomTo();
+viewergrid_17346424223788695[1][1].render();
+viewergrid_17346424223788695[1][0].render();
+viewergrid_17346424223788695[0][1].render();
+viewergrid_17346424223788695[0][0].render();
+});
+</script>
+            </div>
+            <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+                <ul>
+<li><strong>CSD Code</strong>: REJQOM</li>
+<li><strong>Coord Num</strong>: 6</li>
+<li><strong>Charge</strong>: -1</li>
+<li><strong>Spin</strong>: 0</li>
+<li><strong>Stoichiometry</strong>: C4H6IrN2Se8(1-)</li>
+<li><strong>Source</strong>: 1965-2020 CSD</li>
+</ul>
+            </div>
+        </body>
+        </html>
+        
