@@ -4,6 +4,9 @@
 
 Coded by Galymzhan Moldagulov (Grad student @ IBS-CARS & UNIST, KR)
 
+## Acknowledgements:
+Big shoutout to Ph.D. Yaroslav Sobolev (IBS-CARS, KR) for teaching me how embeddings of multi-dimensional space work, Junren Li (PKU, CN) for his guidance with Faerun, as well as Sanzhar Nurgaliyev (NU, KZ), and Assanali Salem (UNIST, KR) for their help!
+
 ## [Organometallic Space (Click to Open)](https://moldagulovg.github.io/organometallic-space/tmap_plot.html)
 
 You can easily:
@@ -35,9 +38,4 @@ You can easily:
 4. *J. Cheminform.*, **2018**, 10, *66*;
 5. *Bioinformatics*, **2018**, 34, *8*, 1433–1435;
 6. *Bioinformatics*, **2015**, 31, *8*, 1322–1324.
-
-## Acknowledgements:
-Big shoutout to Ph.D. Yaroslav Sobolev (IBS-CARS, KR) for teaching me how embeddings of multi-dimensional space work, Junren Li (PKU, CN) for his guidance with Faerun, as well as Sanzhar Nurgaliyev (NU, KZ), and Assanali Salem (UNIST, KR) for their help!
-
-
 
