@@ -1,0 +1,146 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color: white; /* Optional for readability */
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 80%; margin: 20px;">
+            <div id="3dmolviewer_17364939756735554"  style="position: relative; width: 600px; height: 300px;">
+        <p id="3dmolwarning_17364939756735554" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_17364939756735554 = null;
+var warn = document.getElementById("3dmolwarning_17364939756735554");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_17364939756735554 = null;
+viewergrid_17364939756735554 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_17364939756735554"),{rows: 1, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_17364939756735554 = viewergrid_17364939756735554[0][0];
+viewergrid_17364939756735554[0][0].zoomTo();viewergrid_17364939756735554[0][1].zoomTo();	viewergrid_17364939756735554[0][0].addModel("\n     RDKit          3D\n\n  0  0  0  0  0  0  0  0  0  0999 V3000\nM  V30 BEGIN CTAB\nM  V30 COUNTS 35 39 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C 3.123238 3.187083 -0.388837 0\nM  V30 2 C 2.971771 1.978660 -1.313395 0 CFG=2\nM  V30 3 C 1.616449 1.977085 -2.014257 0\nM  V30 4 N 3.207891 0.749285 -0.564214 0 CHG=1 VAL=4\nM  V30 5 C 4.482391 0.296550 -0.287459 0\nM  V30 6 C 5.739053 0.809396 -0.572320 0\nM  V30 7 C 6.832511 0.084008 -0.139524 0\nM  V30 8 C 6.685748 -1.114417 0.555380 0\nM  V30 9 C 5.438481 -1.635962 0.840297 0\nM  V30 10 C 4.336796 -0.915480 0.406488 0\nM  V30 11 N 2.980289 -1.134313 0.511596 0\nM  V30 12 C 2.376806 -2.341055 1.028691 0\nM  V30 13 C 1.779453 -2.168676 2.435447 0\nM  V30 14 O 0.555372 -1.470317 2.382322 0\nM  V30 15 C 2.304965 -0.113370 -0.062260 0 CHG=-1 VAL=3\nM  V30 16 Pd 0.320472 -0.039339 0.018191 0 VAL=4\nM  V30 17 P -1.941256 0.019307 -0.039550 0\nM  V30 18 C -2.355551 0.932755 -1.551359 0\nM  V30 19 C -2.056648 2.296305 -1.548536 0\nM  V30 20 C -2.220056 3.045076 -2.697941 0\nM  V30 21 C -2.664833 2.435433 -3.860957 0\nM  V30 22 C -2.933956 1.077000 -3.874531 0\nM  V30 23 C -2.774458 0.320502 -2.726649 0\nM  V30 24 C -2.812937 -1.572590 -0.104685 0\nM  V30 25 C -2.148863 -2.695873 0.373494 0\nM  V30 26 C -2.793575 -3.918818 0.402630 0\nM  V30 27 C -4.102398 -4.018378 -0.038527 0\nM  V30 28 C -4.774273 -2.893413 -0.491620 0\nM  V30 29 C -4.137159 -1.667300 -0.517744 0\nM  V30 30 C -2.954069 0.790284 1.264946 0\nM  V30 31 C -3.953107 1.726651 1.039522 0\nM  V30 32 C -4.687084 2.213738 2.107137 0\nM  V30 33 C -4.431716 1.768537 3.392887 0\nM  V30 34 C -3.441887 0.824879 3.618403 0\nM  V30 35 C -2.706402 0.335692 2.557462 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 1 1 2 CFG=1\nM  V30 2 1 3 2 CFG=1\nM  V30 3 1 2 4 CFG=1\nM  V30 4 4 4 5\nM  V30 5 4 5 6\nM  V30 6 4 6 7\nM  V30 7 4 7 8\nM  V30 8 4 8 9\nM  V30 9 4 9 10\nM  V30 10 4 10 11\nM  V30 11 1 12 11 CFG=3\nM  V30 12 1 12 13\nM  V30 13 1 13 14 CFG=1\nM  V30 14 4 11 15\nM  V30 15 9 15 16\nM  V30 16 9 17 16\nM  V30 17 1 17 18\nM  V30 18 4 18 19\nM  V30 19 4 19 20\nM  V30 20 4 20 21\nM  V30 21 4 21 22\nM  V30 22 4 22 23\nM  V30 23 1 17 24\nM  V30 24 4 24 25\nM  V30 25 4 25 26\nM  V30 26 4 26 27\nM  V30 27 4 27 28\nM  V30 28 4 28 29\nM  V30 29 1 17 30\nM  V30 30 4 30 31\nM  V30 31 4 31 32\nM  V30 32 4 32 33\nM  V30 33 4 33 34\nM  V30 34 4 34 35\nM  V30 35 4 15 4\nM  V30 36 4 23 18\nM  V30 37 4 29 24\nM  V30 38 4 35 30\nM  V30 39 4 10 5\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n","sdf");
+	viewergrid_17364939756735554[0][1].addModel("\n     RDKit          3D\n\n  0  0  0  0  0  0  0  0  0  0999 V3000\nM  V30 BEGIN CTAB\nM  V30 COUNTS 66 70 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C 3.123238 3.187083 -0.388837 0 CFG=2\nM  V30 2 C 2.971771 1.978660 -1.313395 0 CFG=2\nM  V30 3 C 1.616449 1.977085 -2.014257 0 CFG=2\nM  V30 4 N 3.207891 0.749285 -0.564214 0 CHG=1 VAL=4\nM  V30 5 C 4.482391 0.296550 -0.287459 0\nM  V30 6 C 5.739053 0.809396 -0.572320 0\nM  V30 7 C 6.832511 0.084008 -0.139524 0\nM  V30 8 C 6.685748 -1.114417 0.555380 0\nM  V30 9 C 5.438481 -1.635962 0.840297 0\nM  V30 10 C 4.336796 -0.915480 0.406488 0\nM  V30 11 N 2.980289 -1.134313 0.511596 0\nM  V30 12 C 2.376806 -2.341055 1.028691 0 CFG=1\nM  V30 13 C 1.779453 -2.168676 2.435447 0 CFG=1\nM  V30 14 O 0.555372 -1.470317 2.382322 0\nM  V30 15 C 2.304965 -0.113370 -0.062260 0 CHG=-1 VAL=3\nM  V30 16 Pd 0.320472 -0.039339 0.018191 0 VAL=4\nM  V30 17 P -1.941256 0.019307 -0.039550 0\nM  V30 18 C -2.355551 0.932755 -1.551359 0\nM  V30 19 C -2.056648 2.296305 -1.548536 0\nM  V30 20 C -2.220056 3.045076 -2.697941 0\nM  V30 21 C -2.664833 2.435433 -3.860957 0\nM  V30 22 C -2.933956 1.077000 -3.874531 0\nM  V30 23 C -2.774458 0.320502 -2.726649 0\nM  V30 24 C -2.812937 -1.572590 -0.104685 0\nM  V30 25 C -2.148863 -2.695873 0.373494 0\nM  V30 26 C -2.793575 -3.918818 0.402630 0\nM  V30 27 C -4.102398 -4.018378 -0.038527 0\nM  V30 28 C -4.774273 -2.893413 -0.491620 0\nM  V30 29 C -4.137159 -1.667300 -0.517744 0\nM  V30 30 C -2.954069 0.790284 1.264946 0\nM  V30 31 C -3.953107 1.726651 1.039522 0\nM  V30 32 C -4.687084 2.213738 2.107137 0\nM  V30 33 C -4.431716 1.768537 3.392887 0\nM  V30 34 C -3.441887 0.824879 3.618403 0\nM  V30 35 C -2.706402 0.335692 2.557462 0\nM  V30 36 H 3.026044 4.103925 -0.963429 0\nM  V30 37 H 4.095838 3.181084 0.097884 0\nM  V30 38 H 2.355970 3.173857 0.381083 0\nM  V30 39 H 3.755830 2.009004 -2.082321 0\nM  V30 40 H 1.504186 1.090146 -2.641046 0\nM  V30 41 H 1.544806 2.854703 -2.652455 0\nM  V30 42 H 0.793026 2.027893 -1.286208 0\nM  V30 43 H 5.866905 1.737303 -1.106479 0\nM  V30 44 H 7.825135 0.455659 -0.341795 0\nM  V30 45 H 7.566992 -1.646471 0.878814 0\nM  V30 46 H 5.334138 -2.563191 1.381724 0\nM  V30 47 H 1.567017 -2.648182 0.350753 0\nM  V30 48 H 3.137811 -3.122381 1.042671 0\nM  V30 49 H 1.568300 -3.165812 2.840391 0\nM  V30 50 H 2.497765 -1.664722 3.090542 0\nM  V30 51 H 0.662071 -0.574518 2.746729 0\nM  V30 52 H -1.700021 2.763679 -0.635814 0\nM  V30 53 H -1.993598 4.101491 -2.690045 0\nM  V30 54 H -2.789328 3.019112 -4.761237 0\nM  V30 55 H -3.260265 0.599119 -4.786452 0\nM  V30 56 H -2.954870 -0.745017 -2.747772 0\nM  V30 57 H -1.123961 -2.601830 0.723190 0\nM  V30 58 H -2.276218 -4.794422 0.766219 0\nM  V30 59 H -4.605263 -4.974279 -0.024587 0\nM  V30 60 H -5.799543 -2.973069 -0.823162 0\nM  V30 61 H -4.661107 -0.783458 -0.856782 0\nM  V30 62 H -4.155377 2.079552 0.037467 0\nM  V30 63 H -5.461282 2.946902 1.932170 0\nM  V30 64 H -5.004308 2.158539 4.221467 0\nM  V30 65 H -3.242273 0.476813 4.621073 0\nM  V30 66 H -1.927265 -0.401912 2.718469 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 1 1 2\nM  V30 2 1 2 3\nM  V30 3 1 2 4\nM  V30 4 4 4 5\nM  V30 5 4 5 6\nM  V30 6 4 6 7\nM  V30 7 4 7 8\nM  V30 8 4 8 9\nM  V30 9 4 9 10\nM  V30 10 4 10 11\nM  V30 11 1 11 12\nM  V30 12 1 12 13\nM  V30 13 1 13 14\nM  V30 14 4 11 15\nM  V30 15 9 15 16\nM  V30 16 9 17 16\nM  V30 17 1 17 18\nM  V30 18 4 18 19\nM  V30 19 4 19 20\nM  V30 20 4 20 21\nM  V30 21 4 21 22\nM  V30 22 4 22 23\nM  V30 23 1 17 24\nM  V30 24 4 24 25\nM  V30 25 4 25 26\nM  V30 26 4 26 27\nM  V30 27 4 27 28\nM  V30 28 4 28 29\nM  V30 29 1 17 30\nM  V30 30 4 30 31\nM  V30 31 4 31 32\nM  V30 32 4 32 33\nM  V30 33 4 33 34\nM  V30 34 4 34 35\nM  V30 35 4 15 4\nM  V30 36 4 23 18\nM  V30 37 4 29 24\nM  V30 38 4 35 30\nM  V30 39 4 10 5\nM  V30 40 1 1 36 CFG=3\nM  V30 41 1 1 37\nM  V30 42 1 1 38\nM  V30 43 1 2 39 CFG=3\nM  V30 44 1 3 40 CFG=3\nM  V30 45 1 3 41\nM  V30 46 1 3 42\nM  V30 47 1 6 43\nM  V30 48 1 7 44\nM  V30 49 1 8 45\nM  V30 50 1 9 46\nM  V30 51 1 12 47 CFG=3\nM  V30 52 1 12 48\nM  V30 53 1 13 49 CFG=1\nM  V30 54 1 13 50\nM  V30 55 1 14 51\nM  V30 56 1 19 52\nM  V30 57 1 20 53\nM  V30 58 1 21 54\nM  V30 59 1 22 55\nM  V30 60 1 23 56\nM  V30 61 1 25 57\nM  V30 62 1 26 58\nM  V30 63 1 27 59\nM  V30 64 1 28 60\nM  V30 65 1 29 61\nM  V30 66 1 31 62\nM  V30 67 1 32 63\nM  V30 68 1 33 64\nM  V30 69 1 34 65\nM  V30 70 1 35 66\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n","sdf");
+	viewergrid_17364939756735554[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17364939756735554[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_17364939756735554[0][0].setStyle({"stick": {}});
+	viewergrid_17364939756735554[0][1].setStyle({"stick": {}});
+	viewergrid_17364939756735554[0][1].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_17364939756735554[0][0].setBackgroundColor("black");
+	viewergrid_17364939756735554[0][1].setBackgroundColor("black");
+	viewergrid_17364939756735554[0][0].addLabel("Pd",{"position": {"x": 0.320472, "y": -0.039339, "z": 0.018191}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17364939756735554[0][1].addLabel("Pd",{"position": {"x": 0.320472, "y": -0.039339, "z": 0.018191}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_17364939756735554[0][1].addSphere({"center": {"x": 0.320472, "y": -0.039339, "z": 0.018191}, "radius": 1.39, "color": "magenta", "opacity": 1.0});
+	viewergrid_17364939756735554[0][0].zoomTo();
+	viewergrid_17364939756735554[0][1].zoomTo();
+viewergrid_17364939756735554[0][1].render();
+viewergrid_17364939756735554[0][0].render();
+});
+</script>
+        </div>
+        <div style="width: 80%; margin: 20px;">
+            <div id="3dmolviewer_1736493975676642"  style="position: relative; width: 600px; height: 300px;">
+        <p id="3dmolwarning_1736493975676642" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.0/3Dmol-min.js');
+}
+
+var viewer_1736493975676642 = null;
+var warn = document.getElementById("3dmolwarning_1736493975676642");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+var viewergrid_1736493975676642 = null;
+viewergrid_1736493975676642 = $3Dmol.createViewerGrid(document.getElementById("3dmolviewer_1736493975676642"),{rows: 1, cols: 2, control_all: true},{backgroundColor:"white"});
+viewer_1736493975676642 = viewergrid_1736493975676642[0][0];
+viewergrid_1736493975676642[0][0].zoomTo();viewergrid_1736493975676642[0][1].zoomTo();	viewergrid_1736493975676642[0][0].addModel("\n     RDKit          3D\n\n  0  0  0  0  0  0  0  0  0  0999 V3000\nM  V30 BEGIN CTAB\nM  V30 COUNTS 32 36 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C 5.392120 -2.971423 -1.583714 0\nM  V30 2 C 4.554407 -4.005025 -1.160802 0\nM  V30 3 C 3.172597 -3.808561 -1.091028 0\nM  V30 4 C 2.623239 -2.567700 -1.426705 0\nM  V30 5 P 0.787235 -2.183908 -1.338367 0\nM  V30 6 C 0.304647 -2.738068 -3.099958 0\nM  V30 7 C 1.063330 -1.982209 -4.195324 0\nM  V30 8 C 0.849576 -0.466313 -4.169224 0\nM  V30 9 C -0.560274 -0.041895 -4.605395 0\nM  V30 10 C -1.050801 1.226836 -3.910623 0\nM  V30 11 P -1.499770 0.891547 -2.075364 0\nM  V30 12 C -2.935463 -0.274373 -2.400729 0\nM  V30 13 C -2.899984 -1.544875 -1.823577 0\nM  V30 14 C -3.899114 -2.478437 -2.105407 0\nM  V30 15 C -4.948351 -2.140129 -2.958518 0\nM  V30 16 C -4.997450 -0.865778 -3.529756 0\nM  V30 17 C -3.993248 0.062044 -3.255039 0\nM  V30 18 C -2.387334 2.502117 -1.710996 0\nM  V30 19 C -1.680813 3.704424 -1.854301 0\nM  V30 20 C -2.277197 4.921331 -1.526132 0\nM  V30 21 C -3.586492 4.951835 -1.040192 0\nM  V30 22 C -4.288106 3.757353 -0.876872 0\nM  V30 23 C -3.693346 2.539176 -1.209243 0\nM  V30 24 Pd 0.125253 -0.016682 -0.413099 0 VAL=4\nM  V30 25 C 0.138596 -3.605483 -0.311292 0\nM  V30 26 C -0.813625 -4.518700 -0.777719 0\nM  V30 27 C -1.339530 -5.490546 0.079605 0\nM  V30 28 C -0.914183 -5.564430 1.406003 0\nM  V30 29 C 0.038336 -4.655502 1.878750 0\nM  V30 30 C 0.554022 -3.681997 1.026695 0\nM  V30 31 C 3.469266 -1.534694 -1.851237 0\nM  V30 32 C 4.845485 -1.735776 -1.936044 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 4 1 2\nM  V30 2 4 2 3\nM  V30 3 4 3 4\nM  V30 4 1 4 5\nM  V30 5 1 6 5 CFG=1\nM  V30 6 1 7 6 CFG=1\nM  V30 7 1 8 7 CFG=1\nM  V30 8 1 8 9\nM  V30 9 1 9 10 CFG=1\nM  V30 10 1 10 11 CFG=3\nM  V30 11 1 11 12\nM  V30 12 4 12 13\nM  V30 13 4 13 14\nM  V30 14 4 14 15\nM  V30 15 4 15 16\nM  V30 16 4 16 17\nM  V30 17 1 11 18\nM  V30 18 4 18 19\nM  V30 19 4 19 20\nM  V30 20 4 20 21\nM  V30 21 4 21 22\nM  V30 22 4 22 23\nM  V30 23 9 11 24\nM  V30 24 1 5 25\nM  V30 25 4 25 26\nM  V30 26 4 26 27\nM  V30 27 4 27 28\nM  V30 28 4 28 29\nM  V30 29 4 29 30\nM  V30 30 4 4 31\nM  V30 31 4 31 32\nM  V30 32 4 32 1\nM  V30 33 9 5 24\nM  V30 34 4 30 25\nM  V30 35 4 17 12\nM  V30 36 4 23 18\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n","sdf");
+	viewergrid_1736493975676642[0][1].addModel("\n     RDKit          3D\n\n  0  0  0  0  0  0  0  0  0  0999 V3000\nM  V30 BEGIN CTAB\nM  V30 COUNTS 62 66 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C 5.392120 -2.971423 -1.583714 0\nM  V30 2 C 4.554407 -4.005025 -1.160802 0\nM  V30 3 C 3.172597 -3.808561 -1.091028 0\nM  V30 4 C 2.623239 -2.567700 -1.426705 0\nM  V30 5 P 0.787235 -2.183908 -1.338367 0\nM  V30 6 C 0.304647 -2.738068 -3.099958 0 CFG=2\nM  V30 7 C 1.063330 -1.982209 -4.195324 0 CFG=2\nM  V30 8 C 0.849576 -0.466313 -4.169224 0 CFG=2\nM  V30 9 C -0.560274 -0.041895 -4.605395 0 CFG=1\nM  V30 10 C -1.050801 1.226836 -3.910623 0 CFG=2\nM  V30 11 P -1.499770 0.891547 -2.075364 0\nM  V30 12 C -2.935463 -0.274373 -2.400729 0\nM  V30 13 C -2.899984 -1.544875 -1.823577 0\nM  V30 14 C -3.899114 -2.478437 -2.105407 0\nM  V30 15 C -4.948351 -2.140129 -2.958518 0\nM  V30 16 C -4.997450 -0.865778 -3.529756 0\nM  V30 17 C -3.993248 0.062044 -3.255039 0\nM  V30 18 C -2.387334 2.502117 -1.710996 0\nM  V30 19 C -1.680813 3.704424 -1.854301 0\nM  V30 20 C -2.277197 4.921331 -1.526132 0\nM  V30 21 C -3.586492 4.951835 -1.040192 0\nM  V30 22 C -4.288106 3.757353 -0.876872 0\nM  V30 23 C -3.693346 2.539176 -1.209243 0\nM  V30 24 Pd 0.125253 -0.016682 -0.413099 0 VAL=4\nM  V30 25 C 0.138596 -3.605483 -0.311292 0\nM  V30 26 C -0.813625 -4.518700 -0.777719 0\nM  V30 27 C -1.339530 -5.490546 0.079605 0\nM  V30 28 C -0.914183 -5.564430 1.406003 0\nM  V30 29 C 0.038336 -4.655502 1.878750 0\nM  V30 30 C 0.554022 -3.681997 1.026695 0\nM  V30 31 C 3.469266 -1.534694 -1.851237 0\nM  V30 32 C 4.845485 -1.735776 -1.936044 0\nM  V30 33 H 6.465025 -3.126989 -1.633405 0\nM  V30 34 H 4.974786 -4.968232 -0.888222 0\nM  V30 35 H 2.526225 -4.616102 -0.762765 0\nM  V30 36 H -0.777065 -2.588010 -3.190711 0\nM  V30 37 H 0.511346 -3.812352 -3.177165 0\nM  V30 38 H 0.747258 -2.382807 -5.170437 0\nM  V30 39 H 2.133708 -2.203458 -4.104125 0\nM  V30 40 H 1.596425 0.023411 -4.807937 0\nM  V30 41 H 1.031977 -0.103988 -3.148601 0\nM  V30 42 H -0.580375 0.111492 -5.693533 0\nM  V30 43 H -1.279315 -0.848404 -4.407902 0\nM  V30 44 H -1.948914 1.626750 -4.393163 0\nM  V30 45 H -0.284921 2.010009 -3.936627 0\nM  V30 46 H -2.087987 -1.783794 -1.143379 0\nM  V30 47 H -3.861415 -3.457145 -1.640461 0\nM  V30 48 H -5.729413 -2.861994 -3.175351 0\nM  V30 49 H -5.815965 -0.596339 -4.189958 0\nM  V30 50 H -4.041101 1.052400 -3.698240 0\nM  V30 51 H -0.653410 3.693494 -2.205876 0\nM  V30 52 H -1.718138 5.844100 -1.645665 0\nM  V30 53 H -4.050777 5.897972 -0.781925 0\nM  V30 54 H -5.300182 3.770891 -0.485081 0\nM  V30 55 H -4.243399 1.614440 -1.072872 0\nM  V30 56 H -1.157955 -4.476219 -1.805132 0\nM  V30 57 H -2.079922 -6.191169 -0.294333 0\nM  V30 58 H -1.325089 -6.318125 2.069761 0\nM  V30 59 H 0.362694 -4.686584 2.913639 0\nM  V30 60 H 1.261237 -2.955237 1.410780 0\nM  V30 61 H 3.048283 -0.561375 -2.081850 0\nM  V30 62 H 5.485866 -0.920520 -2.256665 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 4 1 2\nM  V30 2 4 2 3\nM  V30 3 4 3 4\nM  V30 4 1 4 5\nM  V30 5 1 5 6\nM  V30 6 1 6 7\nM  V30 7 1 7 8\nM  V30 8 1 8 9\nM  V30 9 1 9 10\nM  V30 10 1 10 11\nM  V30 11 1 11 12\nM  V30 12 4 12 13\nM  V30 13 4 13 14\nM  V30 14 4 14 15\nM  V30 15 4 15 16\nM  V30 16 4 16 17\nM  V30 17 1 11 18\nM  V30 18 4 18 19\nM  V30 19 4 19 20\nM  V30 20 4 20 21\nM  V30 21 4 21 22\nM  V30 22 4 22 23\nM  V30 23 9 11 24\nM  V30 24 1 5 25\nM  V30 25 4 25 26\nM  V30 26 4 26 27\nM  V30 27 4 27 28\nM  V30 28 4 28 29\nM  V30 29 4 29 30\nM  V30 30 4 4 31\nM  V30 31 4 31 32\nM  V30 32 4 32 1\nM  V30 33 9 5 24\nM  V30 34 4 30 25\nM  V30 35 4 17 12\nM  V30 36 4 23 18\nM  V30 37 1 1 33\nM  V30 38 1 2 34\nM  V30 39 1 3 35\nM  V30 40 1 6 36 CFG=3\nM  V30 41 1 6 37\nM  V30 42 1 7 38 CFG=3\nM  V30 43 1 7 39\nM  V30 44 1 8 40 CFG=3\nM  V30 45 1 8 41\nM  V30 46 1 9 42 CFG=3\nM  V30 47 1 9 43\nM  V30 48 1 10 44 CFG=3\nM  V30 49 1 10 45\nM  V30 50 1 13 46\nM  V30 51 1 14 47\nM  V30 52 1 15 48\nM  V30 53 1 16 49\nM  V30 54 1 17 50\nM  V30 55 1 19 51\nM  V30 56 1 20 52\nM  V30 57 1 21 53\nM  V30 58 1 22 54\nM  V30 59 1 23 55\nM  V30 60 1 26 56\nM  V30 61 1 27 57\nM  V30 62 1 28 58\nM  V30 63 1 29 59\nM  V30 64 1 30 60\nM  V30 65 1 31 61\nM  V30 66 1 32 62\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n","sdf");
+	viewergrid_1736493975676642[0][0].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1736493975676642[0][1].setViewStyle({"style": "outline", "color": "yellow", "width": 0.03});
+	viewergrid_1736493975676642[0][0].setStyle({"stick": {}});
+	viewergrid_1736493975676642[0][1].setStyle({"stick": {}});
+	viewergrid_1736493975676642[0][1].addSurface(1,{"opacity": 0.7, "color": "white"});
+	viewergrid_1736493975676642[0][0].setBackgroundColor("black");
+	viewergrid_1736493975676642[0][1].setBackgroundColor("black");
+	viewergrid_1736493975676642[0][0].addLabel("Pd",{"position": {"x": 0.125253, "y": -0.016682, "z": -0.413099}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1736493975676642[0][1].addLabel("Pd",{"position": {"x": 0.125253, "y": -0.016682, "z": -0.413099}, "fontColor": "white", "backgroundColor": "black", "backgroundOpacity": 0});
+	viewergrid_1736493975676642[0][1].addSphere({"center": {"x": 0.125253, "y": -0.016682, "z": -0.413099}, "radius": 1.39, "color": "magenta", "opacity": 1.0});
+	viewergrid_1736493975676642[0][0].zoomTo();
+	viewergrid_1736493975676642[0][1].zoomTo();
+viewergrid_1736493975676642[0][1].render();
+viewergrid_1736493975676642[0][0].render();
+});
+</script>
+        </div>
+        <div style="width: 80%; margin: 20px; padding: 10px; background-color: #222; border-radius: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white;">
+            <ul>
+<li>Pair: 492_Pd_ActiveFromFullCatalyst &amp; 633_Pd_ActiveFromFullCatalyst</li>
+<li>Cosine Similarity: 1.0</li>
+<li>Rxns in common: 8</li>
+</ul>
+        </div>
+    </body>
+    </html>
+    
